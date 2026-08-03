@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jørgen Østergaard — IT-strategi, IAM, Sikkerhed &amp; AI</title>
+<meta name="description" content="Jørgen Østergaard — IT-leder og rådgiver med fokus på IT-strategi, IAM, Sikkerhed &amp; Compliance og AI. Åben for interim/kontrakt og fastansættelse.">
+<style>
+  :root{
+    --navy:#132436;
+    --navy-2:#1d3450;
+    --slate:#4b5a68;
+    --slate-light:#7c8894;
+    --paper:#fbfaf8;
+    --paper-2:#f2efe9;
+    --line:#e2ddd3;
+    --accent:#8f1315;
+    --accent-2:#b32f2f;
+    --white:#ffffff;
+    --radius:14px;
+    --maxw:1040px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--navy);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:88px 0;}
+  h1,h2,h3{line-height:1.15;margin:0 0 .5em 0;font-weight:700;}
+  h2{font-size:clamp(1.6rem,2.4vw,2.1rem);}
+  p{margin:0 0 1em 0;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.72rem;
+    font-weight:700;
+    color:var(--accent);
+    margin-bottom:14px;
+    display:block;
+  }
+
+  /* Top nav */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(251,250,248,.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;
+  }
+  .brand{font-weight:700;font-size:1.02rem;letter-spacing:.01em;}
+  nav.main{display:flex;gap:22px;flex-wrap:wrap;}
+  nav.main a{
+    font-size:.88rem;font-weight:600;text-decoration:none;color:var(--slate);
+    padding:6px 0;border-bottom:2px solid transparent;
+  }
+  nav.main a:hover{color:var(--navy);border-color:var(--accent);}
+
+  /* Hero */
+  .hero{
+    padding:64px 0 72px 0;
+    background:linear-gradient(180deg,var(--paper) 0%,var(--paper-2) 100%);
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero h1{font-size:clamp(2.1rem,4vw,2.9rem);}
+  .hero .tagline{font-size:1.15rem;color:var(--slate);max-width:46ch;}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#eef4ee;color:#2b6b3f;
+    border:1px solid #cfe4d1;
+    padding:8px 14px;border-radius:999px;
+    font-size:.82rem;font-weight:700;
+    margin-bottom:22px;
+  }
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:#3a9a52;flex:none;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 22px;border-radius:10px;
+    font-weight:700;font-size:.94rem;text-decoration:none;
+    border:1px solid transparent;
+  }
+  .btn.primary{background:var(--navy);color:var(--white);}
+  .btn.primary:hover{background:var(--navy-2);}
+  .btn.ghost{border-color:var(--line);color:var(--navy);background:var(--white);}
+  .btn.ghost:hover{border-color:var(--slate-light);}
+  .meta-line{margin-top:18px;color:var(--slate-light);font-size:.9rem;}
+
+  .portrait{
+    width:100%;aspect-ratio:1/1;border-radius:20px;
+    overflow:hidden;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 20px 40px -18px rgba(19,36,54,.35);
+    position:relative;
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;}
+  .portrait .fallback{
+    color:var(--white);font-size:3.2rem;font-weight:700;letter-spacing:.02em;
+  }
+
+  /* Triangle section */
+  .triangle-section{background:var(--navy);color:var(--white);}
+  .triangle-section .eyebrow{color:#e2b3b3;}
+  .triangle-section .lede{color:#c9d3dc;max-width:60ch;}
+  .triangle-grid{
+    display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center;margin-top:44px;
+  }
+  .tri-figure{display:flex;justify-content:center;}
+  .tri-figure svg{width:100%;max-width:420px;height:auto;}
+  .tri-label{font-size:.86rem;font-weight:700;fill:var(--navy);}
+  .tri-sub{font-size:.62rem;fill:var(--slate);}
+  .tri-list{display:flex;flex-direction:column;gap:18px;}
+  .tri-item{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;padding:18px 20px;
+  }
+  .tri-item strong{display:block;margin-bottom:4px;font-size:1rem;}
+  .tri-item span{color:#c9d3dc;font-size:.92rem;}
+
+  /* Cards */
+  .cards{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px;
+  }
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px 26px;
+  }
+  .card .tag{
+    display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+  }
+  .card h3{font-size:1.15rem;margin-bottom:10px;}
+  .card p{color:var(--slate);font-size:.96rem;margin:0;}
+
+  /* Experience */
+  .exp-section{background:var(--paper-2);}
+  .timeline{margin-top:44px;border-left:2px solid var(--line);padding-left:28px;display:flex;flex-direction:column;gap:34px;}
+  .tl-item{position:relative;}
+  .tl-item::before{
+    content:"";position:absolute;left:-33.5px;top:4px;
+    width:11px;height:11px;border-radius:50%;
+    background:var(--accent);border:2px solid var(--paper-2);
+  }
+  .tl-period{font-size:.8rem;font-weight:700;color:var(--accent);letter-spacing:.03em;text-transform:uppercase;}
+  .tl-role{font-size:1.08rem;font-weight:700;margin:4px 0 2px 0;}
+  .tl-org{color:var(--slate);font-weight:600;font-size:.94rem;margin-bottom:8px;}
+  .tl-desc{color:var(--slate);font-size:.94rem;max-width:70ch;margin:0;}
+
+  /* Contact */
+  .contact-section .wrap{
+    background:var(--navy);color:var(--white);
+    border-radius:20px;padding:56px 48px;
+    display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;
+  }
+  .contact-section h2{margin-bottom:14px;}
+  .contact-section p{color:#c9d3dc;max-width:52ch;}
+  .contact-actions{display:flex;flex-direction:column;gap:14px;}
+  .contact-actions .btn{justify-content:center;}
+  .contact-actions .btn.primary{background:var(--accent);}
+  .contact-actions .btn.primary:hover{background:var(--accent-2);}
+  .contact-actions .btn.ghost{background:transparent;border-color:rgba(255,255,255,.3);color:var(--white);}
+  .contact-actions .btn.ghost:hover{border-color:var(--white);}
+
+  footer.site{padding:34px 0;color:var(--slate-light);font-size:.82rem;text-align:center;}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;}
+    .portrait{max-width:280px;margin:0 auto;}
+    .triangle-grid{grid-template-columns:1fr;}
+    .cards{grid-template-columns:1fr;}
+    .contact-section .wrap{grid-template-columns:1fr;padding:40px 26px;border-radius:16px;}
+    nav.main{display:none;}
+    section{padding:64px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">Jørgen Østergaard</div>
+    <nav class="main">
+      <a href="#profil">Profil</a>
+      <a href="#kompetencer">Kompetencer</a>
+      <a href="#erfaring">Erfaring</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="profil">
+  <div class="wrap">
+    <div>
+      <span class="badge"><span class="dot"></span> Åben for nye muligheder — interim/kontrakt eller fastansættelse</span>
+      <h1>IT-leder og rådgiver inden for IT-strategi, IAM, Sikkerhed &amp; Compliance og AI</h1>
+      <p class="tagline">20+ års erfaring med at binde forretning og teknologi sammen — som CEO, salgsleder og løsningsrådgiver for regulerede virksomheder og det offentlige. Senest 7 måneders intensivt arbejde med Claude Code har givet en praktisk, hands-on forståelse af hvad AI faktisk kan flytte i en organisation.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:jorgen@ic67.dk">Send en mail</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">Se LinkedIn-profil</a>
+      </div>
+      <div class="meta-line">København · Fysisk fremmøde eller hybrid · Danmark</div>
+    </div>
+    <div class="portrait">
+      <img src="foto.jpg" alt="Portræt af Jørgen Østergaard" onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='flex';">
+      <div class="fallback" style="display:none;">JØ</div>
+    </div>
+  </div>
+</section>
+
+<section class="triangle-section">
+  <div class="wrap">
+    <span class="eyebrow">Min tilgang</span>
+    <h2>Forretning, IAM og AI holdt sammen af compliance</h2>
+    <p class="lede">Jeg arbejder i krydsfeltet mellem forretningens behov, adgangsstyring og ny teknologi — med compliance som den tråd der binder det hele sammen, så løsningerne både virker og kan dokumenteres.</p>
+
+    <div class="triangle-grid">
+      <div class="tri-figure">
+        <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="200,26 40,320 360,320" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
+          <circle cx="200" cy="228" r="54" fill="#8f1315"/>
+          <text x="200" y="223" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" font-family="inherit">Compliance</text>
+          <text x="200" y="241" text-anchor="middle" fill="#f2c9c9" font-size="10" font-family="inherit">bindeleddet</text>
+
+          <circle cx="200" cy="26" r="34" fill="#ffffff"/>
+          <text x="200" y="22" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">Forretning</text>
+          <text x="200" y="35" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">strategi &amp; ledelse</text>
+
+          <circle cx="40" cy="320" r="34" fill="#ffffff"/>
+          <text x="40" y="316" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">IAM</text>
+          <text x="40" y="329" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">adgangsstyring</text>
+
+          <circle cx="360" cy="320" r="34" fill="#ffffff"/>
+          <text x="360" y="316" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">AI</text>
+          <text x="360" y="329" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">udvikling &amp; drift</text>
+        </svg>
+      </div>
+      <div class="tri-list">
+        <div class="tri-item">
+          <strong>Forretning</strong>
+          <span>IT-strategi, ledelse og arkitektur forankret i det, forretningen reelt har brug for.</span>
+        </div>
+        <div class="tri-item">
+          <strong>IAM</strong>
+          <span>Program- og projektstyring, behovs- og leverandørvurdering, og styring af migreringer fra ét system til et andet.</span>
+        </div>
+        <div class="tri-item">
+          <strong>AI</strong>
+          <span>Praktisk anvendelse af AI i softwareudvikling og i forretningen — ikke kun teori.</span>
+        </div>
+        <div class="tri-item">
+          <strong>Compliance (midten)</strong>
+          <span>Sikkerhed, tekniske kontroller og de politikker der understøtter dem — ISO 27xxx, NIS2, ISAE.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kompetencer">
+  <div class="wrap">
+    <span class="eyebrow">Hvad jeg kan bidrage med</span>
+    <h2>Fire felter, én sammenhængende profil</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Forretning</span>
+        <h3>IT-strategi, ledelse &amp; arkitektur</h3>
+        <p>Sætter retning for IT som forretningens fundament — fra strategi og organisering til arkitekturbeslutninger, der holder i praksis og ikke kun på papiret.</p>
+      </div>
+      <div class="card">
+        <span class="tag">IAM</span>
+        <h3>Program- og projektstyring</h3>
+        <p>Behovsafklaring, vurdering af løsninger og leverandører, og styring af migreringer — overgangen fra ét system til et andet, uden at tabe kontrol undervejs.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Sikkerhed &amp; compliance</span>
+        <h3>Fra politik til teknisk kontrol</h3>
+        <p>Vurdering af sikkerhedsløsninger og leverandører, programstyring og styring af compliance-projekter — med blik for både de tekniske kontroller og de politikker, der skal understøtte dem: ISO 27xxx, NIS2, ISAE.</p>
+      </div>
+      <div class="card">
+        <span class="tag">AI</span>
+        <h3>AI i udvikling og forretning</h3>
+        <p>Praktisk erfaring med at bruge AI til softwareudvikling og forretningsanvendelse. De seneste 7 måneder har jeg arbejdet dedikeret med Claude Code — og har en udtalt forkærlighed for Claude og de muligheder, det åbner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exp-section" id="erfaring">
+  <div class="wrap">
+    <span class="eyebrow">Erfaring</span>
+    <h2>20 års rejse gennem sikkerhed, IAM og forretningsledelse</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-period">2018 – 2026</div>
+        <div class="tl-role">Founder &amp; CEO</div>
+        <div class="tl-org">ID Connect A/S</div>
+        <p class="tl-desc">Byggede virksomheden op omkring IAM-løsninger, der hjælper kunder med at leve op til krav som NIS2, GDPR og ISO 27xxx — med automatiseret on- og offboarding og fokus på sikkerhed, brugervenlighed og effektivitet.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">2014 – 2018</div>
+        <div class="tl-role">Territory Manager, NetIQ Denmark</div>
+        <div class="tl-org">Micro Focus</div>
+        <p class="tl-desc">Security &amp; Risk Management og Identity &amp; Access Management, samt datacenter-konsolidering, migrering og disaster recovery.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">2008 – 2014</div>
+        <div class="tl-role">Enterprise Account Manager</div>
+        <div class="tl-org">Symantec</div>
+        <p class="tl-desc">Sikkerhedsløsninger til regulerede virksomheder i Danmark — teknisk sikkerhed, compliance-sikkerhed og informationssikkerhed.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">2007 – 2008</div>
+        <div class="tl-role">VP, Managing Director</div>
+        <div class="tl-org">Mondo Hosting A/S</div>
+        <p class="tl-desc">Ledelse af hostingforretning med ca. 50 mio. kr. i omsætning, inklusive konsolidering af flere opkøbte selskaber.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Åben for nye muligheder</h2>
+      <p>Jeg er åben for både kortere interim- og kontraktopgaver og faste stillinger — hos private virksomheder og offentlige arbejdsgivere i Danmark, med fysisk fremmøde eller hybrid. Tag endelig fat, hvis du vil tale om en konkret mulighed.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="btn primary" href="mailto:jorgen@ic67.dk">jorgen@ic67.dk</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">LinkedIn-profil</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">© 2026 Jørgen Østergaard</div>
+</footer>
+
+</body>
+</html>
