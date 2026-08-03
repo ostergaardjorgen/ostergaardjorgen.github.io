@@ -168,16 +168,32 @@
   .contact-section .wrap{
     background:var(--navy);color:var(--white);
     border-radius:20px;padding:56px 48px;
-    display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;
   }
   .contact-section h2{margin-bottom:14px;}
   .contact-section p{color:#c9d3dc;max-width:52ch;}
-  .contact-actions{display:flex;flex-direction:column;gap:14px;}
+  .contact-actions{display:flex;flex-direction:column;gap:14px;margin-top:22px;}
   .contact-actions .btn{justify-content:center;}
-  .contact-actions .btn.primary{background:var(--accent);}
-  .contact-actions .btn.primary:hover{background:var(--accent-2);}
   .contact-actions .btn.ghost{background:transparent;border-color:rgba(255,255,255,.3);color:var(--white);}
   .contact-actions .btn.ghost:hover{border-color:var(--white);}
+  .contact-form{display:flex;flex-direction:column;gap:12px;}
+  .contact-form label{font-size:.78rem;font-weight:700;color:#c9d3dc;}
+  .contact-form input,.contact-form textarea{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:8px;padding:11px 14px;
+    color:var(--white);font-size:.92rem;font-family:inherit;
+    resize:vertical;
+  }
+  .contact-form input::placeholder,.contact-form textarea::placeholder{color:#8494a2;}
+  .contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--accent);outline-offset:1px;}
+  .contact-form .btn.primary{background:var(--accent);margin-top:4px;justify-content:center;}
+  .contact-form .btn.primary:hover{background:var(--accent-2);}
+  .form-sent-note{
+    background:#193a2c;border:1px solid #2b6b3f;color:#bfe8cd;
+    padding:12px 16px;border-radius:10px;font-size:.88rem;font-weight:600;margin-bottom:14px;
+  }
+  .hp-field{position:absolute;left:-9999px;top:-9999px;}
 
   footer.site{padding:34px 0;color:var(--slate-light);font-size:.82rem;text-align:center;}
 
@@ -213,7 +229,7 @@
       <h1>IT-leder og rådgiver inden for IT-strategi, IAM, Sikkerhed &amp; Compliance samt AI til udvikling af både produkter og forretning</h1>
       <p class="tagline">20+ års erfaring med at binde forretning og teknologi sammen — som CEO, salgsleder og løsningsrådgiver for regulerede virksomheder og det offentlige. Senest 7 måneders intensivt arbejde med Claude Code har givet en praktisk, hands-on forståelse af hvad AI faktisk kan flytte i en organisation.</p>
       <div class="cta-row">
-        <a class="btn primary" href="mailto:ostergaard.jorgen@gmail.com">Send en mail</a>
+        <a class="btn primary" href="#kontakt">Skriv til mig</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">Se LinkedIn-profil</a>
       </div>
       <div class="meta-line">København · Fysisk fremmøde eller hybrid · Danmark</div>
@@ -349,13 +365,35 @@
     <div>
       <h2>Åben for nye muligheder</h2>
       <p>Jeg er åben for både kortere interim- og kontraktopgaver og faste stillinger — hos private virksomheder og offentlige arbejdsgivere i Danmark, med fysisk fremmøde eller hybrid. Tag endelig fat, hvis du vil tale om en konkret mulighed.</p>
+      <div class="contact-actions">
+        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">LinkedIn-profil</a>
+      </div>
     </div>
-    <div class="contact-actions">
-      <a class="btn primary" href="mailto:ostergaard.jorgen@gmail.com">ostergaard.jorgen@gmail.com</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">LinkedIn-profil</a>
+    <div>
+      <div class="form-sent-note" id="sentNote" style="display:none;">Tak for din besked — jeg vender tilbage hurtigst muligt.</div>
+      <form class="contact-form" action="https://formsubmit.co/ostergaard.jorgen@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Ny henvendelse fra hjemmesiden">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://ostergaardjorgen.github.io/?sent=1#kontakt">
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+        <label for="cf-name">Navn</label>
+        <input id="cf-name" type="text" name="Navn" required>
+        <label for="cf-email">Din e-mail</label>
+        <input id="cf-email" type="email" name="_replyto" required>
+        <label for="cf-message">Besked</label>
+        <textarea id="cf-message" name="Besked" rows="5" required></textarea>
+        <button type="submit" class="btn primary">Send besked</button>
+      </form>
     </div>
   </div>
 </section>
+<script>
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    var n = document.getElementById('sentNote');
+    if (n) n.style.display = 'block';
+  }
+</script>
 
 <footer class="site">
   <div class="wrap">© 2026 Jørgen Østergaard</div>
