@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jørgen Østergaard — specialist i IAM og sikkerhed</title>
-<meta name="description" content="Jørgen Østergaard — specialist i identitet &amp; adgangsstyring (IAM) og sikkerhed/compliance, med IT-strategi og praktisk AI-erfaring. Åben for interim/kontrakt og fastansættelse.">
+<title>Jørgen Østergaard — specialist i IAM, sikkerhed og IT-ledelse</title>
+<meta name="description" content="Jørgen Østergaard — specialist i identitet &amp; adgangsstyring (IAM), sikkerhed/compliance og IT-ledelse, med praktisk AI-erfaring. Åben for interim/kontrakt og fastansættelse.">
 <style>
   :root{
     --navy:#132436;
@@ -216,6 +216,38 @@
   .tl-role{font-size:1.08rem;font-weight:700;margin:4px 0 2px 0;}
   .tl-org{color:var(--slate);font-weight:600;font-size:.94rem;margin-bottom:8px;}
   .tl-desc{color:var(--slate);font-size:.94rem;max-width:70ch;margin:0;}
+  .tl-sublist{
+    list-style:none;margin:10px 0 0 0;padding:0;
+    max-width:70ch;display:flex;flex-direction:column;gap:7px;
+  }
+  .tl-sublist li{
+    position:relative;padding-left:18px;
+    font-size:.92rem;color:var(--slate);line-height:1.5;
+  }
+  .tl-sublist li::before{
+    content:"";position:absolute;left:0;top:.55em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent);
+  }
+  .tl-sublist strong{color:var(--navy);}
+
+  /* Earlier career — one compact line per role */
+  .earlier{margin-top:44px;padding-top:26px;border-top:1px solid var(--line);}
+  .earlier-h{
+    font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--accent);margin:0 0 16px 0;
+  }
+  .earlier-list{list-style:none;margin:0;padding:0;}
+  .earlier-list li{
+    display:grid;grid-template-columns:118px 1fr;gap:16px;
+    padding:11px 0;border-top:1px solid rgba(226,221,211,.7);
+    font-size:.92rem;color:var(--slate);line-height:1.5;
+  }
+  .earlier-list li:first-child{border-top:none;}
+  .ey-period{
+    font-weight:700;color:var(--accent);font-size:.82rem;
+    font-variant-numeric:tabular-nums;padding-top:1px;
+  }
+  .earlier-list strong{color:var(--navy);}
 
   /* Contact */
   .contact-section .wrap{
@@ -262,6 +294,7 @@
     .area-head{gap:14px;}
     .area-num{font-size:1.2rem;}
     .factstrip{gap:24px;}
+    .earlier-list li{grid-template-columns:1fr;gap:3px;}
   }
 </style>
 </head>
@@ -286,7 +319,7 @@
   <div class="wrap">
     <div>
       <span class="badge"><span class="dot"></span> Åben for nye muligheder — interim/kontrakt eller fastansættelse</span>
-      <h1>Specialist i identitet &amp; adgangsstyring og sikkerhed</h1>
+      <h1>Specialist i identitet &amp; adgangsstyring samt sikkerhed og IT-ledelse</h1>
       <p class="tagline">12+ år dedikeret til IAM og cybersikkerhed — otte af dem med fuldt ejerskab af en identitetsplatform, fra vision og roadmap til drift hos kunder i både det private og det offentlige. Dertil IT-strategi og praktisk, daglig erfaring med AI i udviklingsarbejdet.</p>
       <div class="cta-row">
         <a class="btn primary" href="#kontakt">Skriv til mig</a>
@@ -453,28 +486,49 @@
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-period">2018 – 2026</div>
-        <div class="tl-role">Founder &amp; CEO</div>
+        <div class="tl-role">Founder &amp; CEO — i praksis også produktejer</div>
         <div class="tl-org">ID Connect A/S</div>
-        <p class="tl-desc">Byggede virksomheden op omkring IAM-løsninger, der hjælper kunder med at leve op til krav som NIS2, GDPR og ISO 27xxx — med automatiseret on- og offboarding og fokus på sikkerhed, brugervenlighed og effektivitet.</p>
+        <p class="tl-desc">Byggede virksomheden op omkring en identitetsplatform, der gør kunder i stand til at leve op til og dokumentere adgangskravene i NIS2, GDPR og ISO 27xxx. Jeg satte vision og roadmap, besluttede hvad der blev bygget, og prioriterede udvikling, drift, support og compliance. Platformen kørte på AWS og betjente over 50.000 brugere på tværs af offentlige og private organisationer, herunder den grønlandske energisektor.</p>
       </div>
       <div class="tl-item">
         <div class="tl-period">2014 – 2018</div>
         <div class="tl-role">Territory Manager, NetIQ Denmark</div>
         <div class="tl-org">Micro Focus</div>
-        <p class="tl-desc">Security &amp; Risk Management og Identity &amp; Access Management, samt datacenter-konsolidering, migrering og disaster recovery.</p>
+        <p class="tl-desc">Ansvar for NetIQ — sikkerhedsdivisionen i Micro Focus — i Danmark: identity &amp; access management, access governance, styring af privilegerede konti samt security &amp; risk management. Rådgav CISO'er, CIO'er og infrastrukturchefer i både private og offentlige organisationer om identitetsprogrammer, og oversatte regulativer og risiko til konkrete roadmaps og business cases.</p>
       </div>
       <div class="tl-item">
         <div class="tl-period">2008 – 2014</div>
         <div class="tl-role">Enterprise Account Manager</div>
         <div class="tl-org">Symantec</div>
-        <p class="tl-desc">Sikkerhedsløsninger til regulerede virksomheder i Danmark — teknisk sikkerhed, compliance-sikkerhed og informationssikkerhed.</p>
+        <p class="tl-desc">Seks år med nogle af verdens førende sikkerhedsteknologier, solgt og rådgivet på C-niveau i Danmarks mest regulerede brancher. Arbejdet dækkede tre discipliner:</p>
+        <ul class="tl-sublist">
+          <li><strong>Databeskyttelse</strong> — enterprise backup med NetBackup, arkivering med Enterprise Vault samt høj tilgængelighed og storage management med Veritas Storage Foundation og Cluster.</li>
+          <li><strong>Enhedsbeskyttelse</strong> — endpoint- og perimeterbeskyttelse af arbejdspladser og servere i store, komplekse miljøer.</li>
+          <li><strong>Informationsbeskyttelse</strong> — datatabsforebyggelse (DLP) og kryptering, suppleret med politik- og sårbarhedsstyring til compliance-formål.</li>
+        </ul>
       </div>
-      <div class="tl-item">
-        <div class="tl-period">2007 – 2008</div>
-        <div class="tl-role">VP, Managing Director</div>
-        <div class="tl-org">Mondo Hosting A/S</div>
-        <p class="tl-desc">Ledelse af hostingforretning med ca. 50 mio. kr. i omsætning, inklusive konsolidering af flere opkøbte selskaber.</p>
-      </div>
+    </div>
+
+    <div class="earlier">
+      <h3 class="earlier-h">Tidligere karriere</h3>
+      <ul class="earlier-list">
+        <li>
+          <span class="ey-period">2007 – 2008</span>
+          <span class="ey-body"><strong>VP, Managing Director</strong>, Mondo Hosting A/S — P&amp;L-ansvar for hostingforretning med ca. 50 mio. kr. i omsætning og konsolidering af flere opkøbte selskaber.</span>
+        </li>
+        <li>
+          <span class="ey-period">2004 – 2007</span>
+          <span class="ey-body"><strong>Sales Manager</strong>, Mondo A/S — direkte og indirekte salg af hostingydelser, kanalopbygning og forretningsudvikling.</span>
+        </li>
+        <li>
+          <span class="ey-period">2000 – 2004</span>
+          <span class="ey-body"><strong>Channel Manager</strong>, StorageTek — startede i direkte salg af storage- og backupløsninger og byggede derefter den danske partnerkanal op fra bunden.</span>
+        </li>
+        <li>
+          <span class="ey-period">1994 – 2000</span>
+          <span class="ey-body"><strong>Sales Manager</strong>, EDB Gruppen / Dolberg Data — ERP- og infrastrukturprojekter, fra sælger til salgschef med ansvar for et team på seks.</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
