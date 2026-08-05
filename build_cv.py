@@ -264,7 +264,7 @@ if __name__ == "__main__":
     square_photo()
     da, en = load()
     for lang, txt in (("da", da), ("en", en)):
-        out = os.path.join(HERE, "cv-%s.pdf" % lang)
+        out = os.path.join(HERE, "Jorgen-Ostergaard-cv-%s.pdf" % ("dk" if lang == "da" else "en"))
         build(lang, txt, out)
         print("wrote", os.path.basename(out))
     os.remove(PHOTO_SQ)
