@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jørgen Østergaard — IT-strategi, IAM, Sikkerhed &amp; AI</title>
-<meta name="description" content="Jørgen Østergaard — IT-leder og rådgiver med fokus på IT-strategi, IAM, Sikkerhed &amp; Compliance og AI. Åben for interim/kontrakt og fastansættelse.">
+<title>Jørgen Østergaard — specialist i IAM og sikkerhed</title>
+<meta name="description" content="Jørgen Østergaard — specialist i identitet &amp; adgangsstyring (IAM) og sikkerhed/compliance, med IT-strategi og praktisk AI-erfaring. Åben for interim/kontrakt og fastansættelse.">
 <style>
   :root{
     --navy:#132436;
@@ -150,6 +150,59 @@
   .card h3{font-size:1.15rem;margin-bottom:10px;}
   .card p{color:var(--slate);font-size:.96rem;margin:0;}
 
+  /* Hero fact strip */
+  .factstrip{
+    display:flex;gap:34px;flex-wrap:wrap;
+    margin-top:30px;padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .fact{display:flex;flex-direction:column;}
+  .fact strong{font-size:1.35rem;line-height:1.1;color:var(--accent);}
+  .fact span{font-size:.82rem;color:var(--slate);margin-top:2px;}
+
+  /* Specialism markers in the model list */
+  .tri-item.spec{border-color:rgba(111,179,221,.55);background:rgba(111,179,221,.09);}
+  .tri-item strong em{
+    font-style:normal;font-size:.62rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.1em;
+    background:#6fb3dd;color:#0d1c2b;
+    padding:2px 7px;border-radius:999px;margin-left:8px;
+    vertical-align:middle;
+  }
+
+  /* Deep-dive areas */
+  .area{
+    border-top:1px solid var(--line);
+    padding:34px 0 6px 0;
+  }
+  .area:first-of-type{border-top:none;padding-top:14px;}
+  .area-head{display:flex;gap:20px;align-items:flex-start;}
+  .area-num{
+    font-size:1.5rem;font-weight:700;color:var(--line);
+    line-height:1;flex:none;padding-top:4px;
+    font-variant-numeric:tabular-nums;
+  }
+  .area h3{font-size:1.35rem;margin:6px 0 10px 0;}
+  .area-lede{color:var(--slate);max-width:68ch;margin:0;}
+  .spec-tag{
+    background:var(--accent);color:var(--white);
+    padding:3px 10px;border-radius:999px;
+    font-size:.66rem;letter-spacing:.1em;
+  }
+  .area-list{
+    list-style:none;margin:20px 0 0 0;padding:0;
+    display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;
+  }
+  .area-list li{
+    position:relative;padding-left:18px;
+    font-size:.94rem;color:var(--slate);line-height:1.5;
+  }
+  .area-list li::before{
+    content:"";position:absolute;left:0;top:.55em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent);
+  }
+  .area-list strong{color:var(--navy);}
+
   /* Experience */
   .exp-section{background:var(--paper-2);}
   .timeline{margin-top:44px;border-left:2px solid var(--line);padding-left:28px;display:flex;flex-direction:column;gap:34px;}
@@ -205,6 +258,10 @@
     .contact-section .wrap{grid-template-columns:1fr;padding:40px 26px;border-radius:16px;}
     nav.main{display:none;}
     section{padding:64px 0;}
+    .area-list{grid-template-columns:1fr;}
+    .area-head{gap:14px;}
+    .area-num{font-size:1.2rem;}
+    .factstrip{gap:24px;}
   }
 </style>
 </head>
@@ -215,7 +272,10 @@
     <a class="brand" href="#">Jørgen Østergaard</a>
     <nav class="main">
       <a href="#profil">Profil</a>
-      <a href="#kompetencer">Kompetencer</a>
+      <a href="#identitet">Identitet</a>
+      <a href="#sikkerhed">Sikkerhed</a>
+      <a href="#ai">AI</a>
+      <a href="#strategi">IT-strategi</a>
       <a href="#erfaring">Erfaring</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -226,11 +286,16 @@
   <div class="wrap">
     <div>
       <span class="badge"><span class="dot"></span> Åben for nye muligheder — interim/kontrakt eller fastansættelse</span>
-      <h1>IT-leder og rådgiver inden for IT-strategi, IAM, Sikkerhed &amp; Compliance samt AI til udvikling af både produkter og forretning</h1>
-      <p class="tagline">20+ års erfaring med at binde forretning og teknologi sammen — som CEO, salgsleder og løsningsrådgiver for regulerede virksomheder og det offentlige. Senest 7 måneders intensivt arbejde med Claude Code har givet en praktisk, hands-on forståelse af hvad AI faktisk kan flytte i en organisation.</p>
+      <h1>Specialist i identitet &amp; adgangsstyring og sikkerhed</h1>
+      <p class="tagline">12+ år dedikeret til IAM og cybersikkerhed — otte af dem med fuldt ejerskab af en identitetsplatform, fra vision og roadmap til drift hos kunder i både det private og det offentlige. Dertil IT-strategi og praktisk, daglig erfaring med AI i udviklingsarbejdet.</p>
       <div class="cta-row">
         <a class="btn primary" href="#kontakt">Skriv til mig</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">Se LinkedIn-profil</a>
+      </div>
+      <div class="factstrip">
+        <div class="fact"><strong>12+ år</strong><span>identitet &amp; sikkerhed</span></div>
+        <div class="fact"><strong>8 år</strong><span>ejerskab af IAM-produkt</span></div>
+        <div class="fact"><strong>50.000+</strong><span>brugere på platformen</span></div>
       </div>
       <div class="meta-line">København · Fysisk fremmøde eller hybrid · Danmark</div>
     </div>
@@ -244,8 +309,8 @@
 <section class="triangle-section">
   <div class="wrap">
     <span class="eyebrow">Min tilgang</span>
-    <h2>Forretningen i centrum</h2>
-    <p class="lede">Fire felter arbejder sammen om ét mål: forretningens værdiskabelse. IT-projekt &amp; strategi, IAM, AI og compliance &amp; sikkerhed giver kun mening, når de omsættes til konkrete milepæle for forretningen.</p>
+    <h2>To specialer, fire felter — og forretningen i centrum</h2>
+    <p class="lede">Identitet og sikkerhed er mine specialer. IT-strategi og AI er det, der gør dem anvendelige i praksis. Alle fire felter arbejder mod ét mål: værdi for forretningen, med konkrete milepæle der kan følges og dokumenteres.</p>
 
     <div class="triangle-grid">
       <div class="tri-figure">
@@ -259,39 +324,41 @@
           <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-size="14.5" font-weight="700" font-family="inherit">Forretning</text>
           <text x="200" y="211" text-anchor="middle" fill="#cfe6f5" font-size="9.5" font-family="inherit">værdi &amp; milepæle</text>
 
-          <circle cx="200" cy="50" r="42" fill="#ffffff"/>
-          <text x="200" y="46" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">IT-strategi</text>
-          <text x="200" y="59" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">projekt &amp; arkitektur</text>
+          <circle cx="200" cy="50" r="44" fill="#6fb3dd"/>
+          <text x="200" y="42" text-anchor="middle" fill="#0d1c2b" font-size="8" font-weight="700" font-family="inherit">SPECIALE</text>
+          <text x="200" y="55" text-anchor="middle" fill="#0d1c2b" font-size="12.5" font-weight="700" font-family="inherit">Identitet</text>
+          <text x="200" y="66" text-anchor="middle" fill="#123047" font-size="8.5" font-family="inherit">IAM &amp; governance</text>
 
-          <circle cx="350" cy="200" r="42" fill="#ffffff"/>
-          <text x="350" y="196" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">AI</text>
-          <text x="350" y="209" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">udvikling &amp; værdi</text>
+          <circle cx="350" cy="200" r="44" fill="#6fb3dd"/>
+          <text x="350" y="192" text-anchor="middle" fill="#0d1c2b" font-size="8" font-weight="700" font-family="inherit">SPECIALE</text>
+          <text x="350" y="205" text-anchor="middle" fill="#0d1c2b" font-size="12.5" font-weight="700" font-family="inherit">Sikkerhed</text>
+          <text x="350" y="216" text-anchor="middle" fill="#123047" font-size="8.5" font-family="inherit">&amp; compliance</text>
 
           <circle cx="200" cy="350" r="42" fill="#ffffff"/>
-          <text x="200" y="346" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">Compliance</text>
-          <text x="200" y="359" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">&amp; sikkerhed</text>
+          <text x="200" y="346" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">AI</text>
+          <text x="200" y="359" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">udvikling &amp; værdi</text>
 
           <circle cx="50" cy="200" r="42" fill="#ffffff"/>
-          <text x="50" y="196" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">IAM</text>
-          <text x="50" y="209" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">analyse &amp; impl.</text>
+          <text x="50" y="196" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">IT-strategi</text>
+          <text x="50" y="209" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">&amp; ledelse</text>
         </svg>
       </div>
       <div class="tri-list">
-        <div class="tri-item">
-          <strong>IT-projekt &amp; strategi</strong>
-          <span>Projektledelse og strategisk retning for IT — altid koblet til konkrete forretningsmål og milepæle.</span>
+        <div class="tri-item spec">
+          <strong>Identitet &amp; adgangsstyring <em>speciale</em></strong>
+          <span>Access governance, privilegerede adgange, katalogtjenester og automatiseret livscyklus — bygget så adgangene kan dokumenteres over for revisor.</span>
         </div>
-        <div class="tri-item">
-          <strong>IAM — analyse &amp; implementering</strong>
-          <span>Behovsanalyse og implementering af adgangsstyring, der skaber målbar værdi for forretningen — ikke bare compliance på papiret.</span>
+        <div class="tri-item spec">
+          <strong>Sikkerhed &amp; compliance <em>speciale</em></strong>
+          <span>Et årti i sikkerhedsbranchen før IAM. NIS2, GDPR, ISO 27xxx og ISAE — både de tekniske kontroller og de politikker der skal bære dem.</span>
         </div>
         <div class="tri-item">
           <strong>AI — udvikling &amp; værdi</strong>
-          <span>Anvendelse af AI i softwareudvikling og forretning, med fokus på reel værdiskabelse frem for teknologi for teknologiens skyld.</span>
+          <span>Daglig, praktisk brug af AI i udviklingsarbejdet, og en nøgtern vurdering af hvor AI reelt flytter noget i forretningen.</span>
         </div>
         <div class="tri-item">
-          <strong>Compliance &amp; sikkerhed</strong>
-          <span>Sikkerheds- og compliance-projekter der understøtter forretningen — dokumenteret, målbart og med klare milepæle.</span>
+          <strong>IT-strategi &amp; ledelse</strong>
+          <span>Program- og projektstyring, behovs- og leverandørvurdering, migrering — og otte år med fuldt ansvar for P&amp;L, HR og jura.</span>
         </div>
       </div>
     </div>
@@ -301,36 +368,88 @@
 <section id="kompetencer">
   <div class="wrap">
     <span class="eyebrow">Hvad jeg kan bidrage med</span>
-    <h2>Fire felter, ét fokus: forretning, værdiskabelse og konkrete milepæle</h2>
-    <div class="cards">
-      <div class="card">
-        <span class="tag">IT-projekt &amp; strategi</span>
-        <h3>Retning der holder i praksis</h3>
-        <p>Projektledelse og strategisk retning for IT, forankret i det forretningen reelt har brug for — fra arkitekturbeslutninger til milepæle der kan følges og leveres.</p>
+    <h2>Fire fagområder — to af dem som speciale</h2>
+
+    <article class="area" id="identitet">
+      <div class="area-head">
+        <span class="area-num">01</span>
+        <div>
+          <span class="tag spec-tag">Speciale</span>
+          <h3>Identitet &amp; adgangsstyring</h3>
+          <p class="area-lede">Otte år med at eje en identitetsplatform hele vejen — fra vision og roadmap til drift hos kunder i det private og det offentlige. Jeg har selv truffet beslutningerne om hvilke funktioner der blev bygget, og prioriteret udvikling, drift, support og compliance mod risiko, kundeværdi og den kapacitet vi faktisk havde.</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="tag">IAM</span>
-        <h3>Analyse &amp; implementering</h3>
-        <p>Behovsanalyse, vurdering af løsninger og leverandører, og implementering af adgangsstyring — med fokus på målbar værdi for forretningen, ikke kun compliance på papiret.</p>
+      <ul class="area-list">
+        <li><strong>Access governance &amp; attestering</strong> — attesteringskampagner med eskalering op ad ledelseskæden, rollebaseret adgangsmodel og selvbetjent bestilling med godkendelsesflow.</li>
+        <li><strong>Privilegerede adgange</strong> — governance for privilegerede roller: kun direkte tildeling, dedikeret attesteringskadence og just-in-time aktivering frem for permanente rettigheder.</li>
+        <li><strong>Katalogtjenester &amp; autentifikation</strong> — Microsoft Entra ID til kontolivscyklus, gruppe- og licenstildeling, sessionspolitik og step-up MFA ved følsomme handlinger.</li>
+        <li><strong>Joiner-mover-leaver</strong> — automatiseret livscyklus: konti klar før første arbejdsdag, roller på tværs af systemer, og offboarding der lukker sessioner, frigiver licenser og håndhæver karantæne og opbevaring.</li>
+        <li><strong>Datagrundlaget</strong> — integration til de største HR- og lønplatforme i den offentlige sektor, så data bag hver digital identitet er korrekt ved kilden.</li>
+        <li><strong>Afstemning &amp; bevis</strong> — rapportering der giver revisor holdbar dokumentation for hvem der har adgang til hvad, og hvorfor.</li>
+      </ul>
+    </article>
+
+    <article class="area" id="sikkerhed">
+      <div class="area-head">
+        <span class="area-num">02</span>
+        <div>
+          <span class="tag spec-tag">Speciale</span>
+          <h3>Sikkerhed &amp; compliance</h3>
+          <p class="area-lede">Før jeg byggede en IAM-virksomhed, havde jeg et årti i sikkerhedsbranchen — hos Symantec og NetIQ/Micro Focus. Det er derfor jeg læser identitet som en sikkerhedsdisciplin først, og ikke som en administrativ opgave. Automatisering er i sig selv en sikkerhedskontrol: en pålidelig offboarding lukker adgangen præcis når den skal.</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="tag">Compliance &amp; sikkerhed</span>
-        <h3>Fra politik til teknisk kontrol</h3>
-        <p>Vurdering af sikkerhedsløsninger og leverandører, programstyring og styring af compliance-projekter — med blik for både de tekniske kontroller og de politikker, der skal understøtte dem: ISO 27xxx, NIS2, ISAE.</p>
+      <ul class="area-list">
+        <li><strong>Regulativer i praksis</strong> — NIS2, GDPR, ISO 27xxx og ISAE omsat til noget der kan bygges, drives og dokumenteres.</li>
+        <li><strong>Både kontrol og politik</strong> — de tekniske kontroller og de politikker der skal bære dem, så de ikke lever hvert sit sted.</li>
+        <li><strong>Revisionsparathed</strong> — uforanderlig audit-log, compliance-rapportering og dokumentation der holder når revisor spørger.</li>
+        <li><strong>Vurdering af løsninger og leverandører</strong> — nøgtern bedømmelse af hvad der reelt dækker behovet, og hvad der bare ser godt ud i en demo.</li>
+        <li><strong>Programstyring af compliance-projekter</strong> — med prioritering efter risiko frem for efter hvad der er nemmest at komme i gang med.</li>
+        <li><strong>Bred sikkerhedsbaggrund</strong> — endpoint- og perimeterbeskyttelse, sårbarheds- og politikstyring, datatabsforebyggelse og kryptering.</li>
+        <li><strong>Kritisk infrastruktur</strong> — drift af en AWS-platform med 50.000+ brugere på tværs af offentlige og private organisationer, herunder den grønlandske energisektor.</li>
+      </ul>
+    </article>
+
+    <article class="area" id="ai">
+      <div class="area-head">
+        <span class="area-num">03</span>
+        <div>
+          <h3>AI — udvikling og forretning</h3>
+          <p class="area-lede">Det seneste år har vores udviklingsarbejde været drevet af AI med Claude Code. Det har givet en praktisk forståelse af hvor AI reelt skaber værdi — og hvor det ikke gør. Den forskel er svær at have en holdning til, hvis man ikke selv har bygget noget med det.</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="tag">AI</span>
-        <h3>Udvikling &amp; værdi</h3>
-        <p>Praktisk erfaring med at bruge AI til softwareudvikling og forretningsanvendelse. De seneste 7 måneder har jeg arbejdet dedikeret med Claude Code — og har en udtalt forkærlighed for Claude og de muligheder, det åbner.</p>
+      <ul class="area-list">
+        <li><strong>AI i udviklingsarbejdet</strong> — dagligt, hands-on arbejde med Claude Code frem for teoretisk kendskab.</li>
+        <li><strong>Vurdering af værdi</strong> — hvor AI flytter noget i forretningen, og hvor det bliver teknologi for teknologiens skyld.</li>
+        <li><strong>On-premises kontra cloud</strong> — hvornår lokal AI-infrastruktur giver mening frem for rene skyabonnementer.</li>
+        <li><strong>Automatisering som kontrol</strong> — AI og automatisering brugt til at hæve sikkerhedsniveauet, ikke kun til at spare tid.</li>
+        <li><strong>Bindeled mellem udvikling og forretning</strong> — oversættelse begge veje, så begge sider forstår hvad der er muligt og hvad det koster.</li>
+      </ul>
+    </article>
+
+    <article class="area" id="strategi">
+      <div class="area-head">
+        <span class="area-num">04</span>
+        <div>
+          <h3>IT-strategi &amp; ledelse</h3>
+          <p class="area-lede">32 år i enterprise-IT, heraf otte som stifter og direktør med fuldt ansvar for P&amp;L, HR, jura og drift. Jeg er vant til at forklare afvejninger for ledelsen i almindeligt forretningssprog — og til at stå på mål for resultatet bagefter.</p>
+        </div>
       </div>
-    </div>
+      <ul class="area-list">
+        <li><strong>Strategi og arkitektur</strong> — retning for IT forankret i det, forretningen reelt har brug for.</li>
+        <li><strong>Program- og projektstyring</strong> — med milepæle der kan følges, og en prioritering der kan forsvares.</li>
+        <li><strong>Behovsafklaring og leverandørvalg</strong> — fra kravafdækning til forhandling.</li>
+        <li><strong>Migrering</strong> — styring af overgangen fra ét system til et andet, uden at miste kontrollen undervejs.</li>
+        <li><strong>Rådgivning på direktionsniveau</strong> — sparring med CIO'er, CISO'er og DPO'er om strategi, risiko og investeringer.</li>
+        <li><strong>Fuldt ejerskab</strong> — otte år med ansvar for økonomi, personale, jura og kunderelationer i egen virksomhed.</li>
+      </ul>
+    </article>
   </div>
 </section>
 
 <section class="exp-section" id="erfaring">
   <div class="wrap">
     <span class="eyebrow">Erfaring</span>
-    <h2>20 års rejse gennem sikkerhed, IAM og forretningsledelse</h2>
+    <h2>Fra sikkerhedsbranchen til eget IAM-produkt</h2>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-period">2018 – 2026</div>
