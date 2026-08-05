@@ -278,6 +278,13 @@
   .contact-section h2{margin-bottom:14px;}
   .contact-section p{color:#c9d3dc;max-width:52ch;}
   .contact-actions{display:flex;flex-direction:column;gap:14px;margin-top:22px;}
+  .btn-ico{width:17px;height:17px;fill:currentColor;flex:none;}
+  .qr-block{display:flex;align-items:center;gap:16px;margin-top:22px;}
+  .qr-block img{
+    width:108px;height:108px;flex:none;
+    background:var(--white);border-radius:10px;padding:8px;
+  }
+  .qr-block span{font-size:.84rem;color:#c9d3dc;max-width:22ch;line-height:1.45;}
   .contact-actions .btn{justify-content:center;}
   .contact-actions .btn.ghost{background:transparent;border-color:rgba(255,255,255,.3);color:var(--white);}
   .contact-actions .btn.ghost:hover{border-color:var(--white);}
@@ -422,19 +429,19 @@
 <section class="hero" id="profil">
   <div class="wrap">
     <div>
-      <span class="badge"><span class="dot"></span> <span data-i18n="hero.badge">Åben for nye muligheder — interim/kontrakt eller fastansættelse</span></span>
+      <span class="badge"><span class="dot"></span> <span data-i18n="hero.badge">Åben for nye muligheder — Product Manager, IAM-lead eller tilsvarende</span></span>
       <h1 data-i18n="hero.h1">Specialist i identitet &amp; adgangsstyring samt sikkerhed og IT-ledelse</h1>
       <p class="tagline" data-i18n="hero.tagline">12+ år dedikeret til IAM og cybersikkerhed — otte af dem med fuldt ejerskab af en identitetsplatform, fra vision og roadmap til drift hos kunder i både det private og det offentlige. Dertil IT-strategi og praktisk, daglig erfaring med AI i udviklingsarbejdet.</p>
       <div class="cta-row">
         <a class="btn primary" href="#kontakt" data-i18n="hero.cta1">Skriv til mig</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener" data-i18n="hero.cta2">Se LinkedIn-profil</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11 22 14v7h-4v-6.2c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21h-4z"/></svg><span data-i18n="hero.cta2">Se LinkedIn-profil</span></a>
       </div>
       <div class="factstrip">
         <div class="fact"><strong data-i18n="fact.1n">12+ år</strong><span data-i18n="fact.1l">identitet &amp; sikkerhed</span></div>
         <div class="fact"><strong data-i18n="fact.2n">8 år</strong><span data-i18n="fact.2l">ejerskab af IAM-produkt</span></div>
         <div class="fact"><strong data-i18n="fact.3n">32+ år</strong><span data-i18n="fact.3l">enterprise IT</span></div>
       </div>
-      <div class="meta-line" data-i18n="hero.meta">København · Fysisk fremmøde eller hybrid · Danmark</div>
+      <div class="meta-line" data-i18n="hero.meta">København · Interim eller fast · Fysisk fremmøde eller hybrid</div>
     </div>
     <div class="portrait">
       <img src="foto.jpg" alt="Portræt af Jørgen Østergaard" onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='flex';">
@@ -643,7 +650,11 @@
       <h2 data-i18n="ct.h2">Åben for nye muligheder</h2>
       <p data-i18n="ct.p">Jeg er åben for både kortere interim- og kontraktopgaver og faste stillinger — hos private virksomheder og offentlige arbejdsgivere i Danmark, med fysisk fremmøde eller hybrid. Tag endelig fat, hvis du vil tale om en konkret mulighed.</p>
       <div class="contact-actions">
-        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener" data-i18n="ct.li">LinkedIn-profil</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11 22 14v7h-4v-6.2c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21h-4z"/></svg><span data-i18n="ct.li">LinkedIn-profil</span></a>
+      </div>
+      <div class="qr-block">
+        <img src="qr-linkedin.svg" alt="QR-kode til LinkedIn-profil" width="108" height="108">
+        <span data-i18n="ct.qr">Scan koden og gå direkte til min LinkedIn-profil</span>
       </div>
     </div>
     <div>
@@ -671,7 +682,7 @@
 <nav class="tabbar" aria-label="Genveje">
   <a href="#profil" data-tab="profil">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg>
-    <span data-i18n="tab.profil">Profil</span>
+    <span data-i18n="tab.profil">Start</span>
   </a>
   <a href="#identitet" data-tab="identitet">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="12" r="3.6"/><path d="M12.1 12H21m-3 0v3m-3-3v2.2"/></svg>
@@ -693,7 +704,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <span class="foot-version">Version 0.12</span>
+    <span class="foot-version">Version 0.13</span>
     <span class="foot-note" data-i18n="foot.note">Udarbejdet og præsenteret med assistance fra Claude og GitHub</span>
     <span class="foot-copy">© 2026 Jørgen Østergaard</span>
   </div>
@@ -734,14 +745,14 @@
       "nav.identitet":"Identity","nav.sikkerhed":"Security","nav.ai":"AI",
       "nav.strategi":"IT strategy","nav.erfaring":"Experience","nav.kontakt":"Contact",
 
-      "hero.badge":"Open to new opportunities \u2014 interim/contract or permanent",
+      "hero.badge":"Open to new opportunities \u2014 Product Manager, IAM lead or similar",
       "hero.h1":"Specialist in identity &amp; access management, security and IT leadership",
       "hero.tagline":"12+ years dedicated to IAM and cyber security \u2014 eight of them owning an identity platform end to end, from vision and roadmap to running it for customers in both the private and the public sector. Alongside that: IT strategy and practical, daily experience with AI in development work.",
       "hero.cta1":"Get in touch","hero.cta2":"View LinkedIn profile",
       "fact.1n":"12+ yrs","fact.1l":"identity &amp; security",
       "fact.2n":"8 yrs","fact.2l":"owning an IAM product",
       "fact.3n":"32+ yrs","fact.3l":"enterprise IT",
-      "hero.meta":"Copenhagen \u00b7 On-site or hybrid \u00b7 Denmark",
+      "hero.meta":"Copenhagen \u00b7 Interim or permanent \u00b7 On-site or hybrid",
 
       "model.eyebrow":"My approach",
       "model.h2":"Two specialisms, four fields \u2014 with the business at the centre",
@@ -818,11 +829,11 @@
 
       "ct.h2":"Open to new opportunities",
       "ct.p":"I am open to both shorter interim and contract assignments and permanent positions \u2014 with private companies and public sector employers in Denmark, on-site or hybrid. Do get in touch if you would like to talk about a specific opportunity.",
-      "ct.li":"LinkedIn profile",
+      "ct.li":"LinkedIn profile","ct.qr":"Scan the code to open my LinkedIn profile",
       "ct.sent":"Thank you for your message \u2014 I will get back to you as soon as possible.",
       "ct.lname":"Name","ct.lmail":"Your email","ct.lphone":"Phone (optional)","ct.lmsg":"Message","ct.send":"Send message",
 
-      "tab.profil":"Profile","tab.identitet":"Identity","tab.sikkerhed":"Security",
+      "tab.profil":"Home","tab.identitet":"Identity","tab.sikkerhed":"Security",
       "tab.erfaring":"Experience","tab.kontakt":"Contact",
 
       "foot.note":"Created and presented with assistance from Claude and GitHub"
