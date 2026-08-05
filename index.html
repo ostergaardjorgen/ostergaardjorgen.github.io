@@ -72,6 +72,17 @@
     padding:6px 0;border-bottom:2px solid transparent;
   }
   nav.main a:hover{color:var(--navy);border-color:var(--accent);}
+  .head-right{display:flex;align-items:center;gap:20px;}
+  .langbtn{
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--white);border:1px solid var(--line);
+    border-radius:999px;padding:6px 12px 6px 7px;
+    font:inherit;font-size:.76rem;font-weight:700;letter-spacing:.04em;
+    color:var(--navy);cursor:pointer;line-height:1;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .langbtn:hover{border-color:var(--slate-light);}
+  .langbtn svg{width:22px;height:15px;border-radius:2px;display:block;flex:none;}
 
   /* Hero */
   .hero{
@@ -336,6 +347,8 @@
     .cards{grid-template-columns:1fr;}
     .contact-section .wrap{grid-template-columns:1fr;padding:40px 26px;border-radius:16px;}
     nav.main{display:none;}
+    .head-right{gap:0;}
+    .langbtn{padding:8px 14px 8px 9px;}
     section{padding:64px 0;}
     .area-list{grid-template-columns:1fr;}
     .area-head{gap:14px;}
@@ -392,34 +405,37 @@
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#">Jørgen Østergaard</a>
-    <nav class="main">
-      <a href="#profil">Profil</a>
-      <a href="#identitet">Identitet</a>
-      <a href="#sikkerhed">Sikkerhed</a>
-      <a href="#ai">AI</a>
-      <a href="#strategi">IT-strategi</a>
-      <a href="#erfaring">Erfaring</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+    <div class="head-right">
+      <nav class="main">
+        <a href="#profil" data-i18n="nav.profil">Profil</a>
+        <a href="#identitet" data-i18n="nav.identitet">Identitet</a>
+        <a href="#sikkerhed" data-i18n="nav.sikkerhed">Sikkerhed</a>
+        <a href="#ai" data-i18n="nav.ai">AI</a>
+        <a href="#strategi" data-i18n="nav.strategi">IT-strategi</a>
+        <a href="#erfaring" data-i18n="nav.erfaring">Erfaring</a>
+        <a href="#kontakt" data-i18n="nav.kontakt">Kontakt</a>
+      </nav>
+      <button type="button" class="langbtn" id="langToggle" aria-label="Switch to English"></button>
+    </div>
   </div>
 </header>
 
 <section class="hero" id="profil">
   <div class="wrap">
     <div>
-      <span class="badge"><span class="dot"></span> Åben for nye muligheder — interim/kontrakt eller fastansættelse</span>
-      <h1>Specialist i identitet &amp; adgangsstyring samt sikkerhed og IT-ledelse</h1>
-      <p class="tagline">12+ år dedikeret til IAM og cybersikkerhed — otte af dem med fuldt ejerskab af en identitetsplatform, fra vision og roadmap til drift hos kunder i både det private og det offentlige. Dertil IT-strategi og praktisk, daglig erfaring med AI i udviklingsarbejdet.</p>
+      <span class="badge"><span class="dot"></span> <span data-i18n="hero.badge">Åben for nye muligheder — interim/kontrakt eller fastansættelse</span></span>
+      <h1 data-i18n="hero.h1">Specialist i identitet &amp; adgangsstyring samt sikkerhed og IT-ledelse</h1>
+      <p class="tagline" data-i18n="hero.tagline">12+ år dedikeret til IAM og cybersikkerhed — otte af dem med fuldt ejerskab af en identitetsplatform, fra vision og roadmap til drift hos kunder i både det private og det offentlige. Dertil IT-strategi og praktisk, daglig erfaring med AI i udviklingsarbejdet.</p>
       <div class="cta-row">
-        <a class="btn primary" href="#kontakt">Skriv til mig</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">Se LinkedIn-profil</a>
+        <a class="btn primary" href="#kontakt" data-i18n="hero.cta1">Skriv til mig</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener" data-i18n="hero.cta2">Se LinkedIn-profil</a>
       </div>
       <div class="factstrip">
-        <div class="fact"><strong>12+ år</strong><span>identitet &amp; sikkerhed</span></div>
-        <div class="fact"><strong>8 år</strong><span>ejerskab af IAM-produkt</span></div>
-        <div class="fact"><strong>32+ år</strong><span>enterprise IT</span></div>
+        <div class="fact"><strong data-i18n="fact.1n">12+ år</strong><span data-i18n="fact.1l">identitet &amp; sikkerhed</span></div>
+        <div class="fact"><strong data-i18n="fact.2n">8 år</strong><span data-i18n="fact.2l">ejerskab af IAM-produkt</span></div>
+        <div class="fact"><strong data-i18n="fact.3n">32+ år</strong><span data-i18n="fact.3l">enterprise IT</span></div>
       </div>
-      <div class="meta-line">København · Fysisk fremmøde eller hybrid · Danmark</div>
+      <div class="meta-line" data-i18n="hero.meta">København · Fysisk fremmøde eller hybrid · Danmark</div>
     </div>
     <div class="portrait">
       <img src="foto.jpg" alt="Portræt af Jørgen Østergaard" onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='flex';">
@@ -430,9 +446,9 @@
 
 <section class="triangle-section">
   <div class="wrap">
-    <span class="eyebrow">Min tilgang</span>
-    <h2>To specialer, fire felter — og forretningen i centrum</h2>
-    <p class="lede">Identitet og sikkerhed er mine specialer. IT-strategi og AI er det, der gør dem anvendelige i praksis. Alle fire felter arbejder mod ét mål: værdi for forretningen, med konkrete milepæle der kan følges og dokumenteres.</p>
+    <span class="eyebrow" data-i18n="model.eyebrow">Min tilgang</span>
+    <h2 data-i18n="model.h2">To specialer, fire felter — og forretningen i centrum</h2>
+    <p class="lede" data-i18n="model.lede">Identitet og sikkerhed er mine specialer. IT-strategi og AI er det, der gør dem anvendelige i praksis. Alle fire felter arbejder mod ét mål: værdi for forretningen, med konkrete milepæle der kan følges og dokumenteres.</p>
 
     <div class="triangle-grid">
       <div class="tri-figure">
@@ -443,44 +459,44 @@
           <line x1="200" y1="200" x2="50" y2="200" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
 
           <circle cx="200" cy="200" r="56" fill="#1c6ea4"/>
-          <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-size="14.5" font-weight="700" font-family="inherit">Forretning</text>
-          <text x="200" y="211" text-anchor="middle" fill="#cfe6f5" font-size="9.5" font-family="inherit">værdi &amp; milepæle</text>
+          <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-size="14.5" font-weight="700" font-family="inherit" data-i18n="svg.biz">Forretning</text>
+          <text x="200" y="211" text-anchor="middle" fill="#cfe6f5" font-size="9.5" font-family="inherit" data-i18n="svg.bizsub">værdi &amp; milepæle</text>
 
           <circle cx="200" cy="50" r="44" fill="#6fb3dd"/>
-          <text x="200" y="42" text-anchor="middle" fill="#0d1c2b" font-size="8" font-weight="700" font-family="inherit">SPECIALE</text>
-          <text x="200" y="55" text-anchor="middle" fill="#0d1c2b" font-size="12.5" font-weight="700" font-family="inherit">Identitet</text>
-          <text x="200" y="66" text-anchor="middle" fill="#123047" font-size="8.5" font-family="inherit">IAM &amp; governance</text>
+          <text x="200" y="42" text-anchor="middle" fill="#0d1c2b" font-size="8" font-weight="700" font-family="inherit" data-i18n="svg.spec1">SPECIALE</text>
+          <text x="200" y="55" text-anchor="middle" fill="#0d1c2b" font-size="12.5" font-weight="700" font-family="inherit" data-i18n="svg.id">Identitet</text>
+          <text x="200" y="66" text-anchor="middle" fill="#123047" font-size="8.5" font-family="inherit" data-i18n="svg.idsub">IAM &amp; governance</text>
 
           <circle cx="350" cy="200" r="44" fill="#6fb3dd"/>
-          <text x="350" y="192" text-anchor="middle" fill="#0d1c2b" font-size="8" font-weight="700" font-family="inherit">SPECIALE</text>
-          <text x="350" y="205" text-anchor="middle" fill="#0d1c2b" font-size="12.5" font-weight="700" font-family="inherit">Sikkerhed</text>
-          <text x="350" y="216" text-anchor="middle" fill="#123047" font-size="8.5" font-family="inherit">&amp; compliance</text>
+          <text x="350" y="192" text-anchor="middle" fill="#0d1c2b" font-size="8" font-weight="700" font-family="inherit" data-i18n="svg.spec2">SPECIALE</text>
+          <text x="350" y="205" text-anchor="middle" fill="#0d1c2b" font-size="12.5" font-weight="700" font-family="inherit" data-i18n="svg.sec">Sikkerhed</text>
+          <text x="350" y="216" text-anchor="middle" fill="#123047" font-size="8.5" font-family="inherit" data-i18n="svg.secsub">&amp; compliance</text>
 
           <circle cx="200" cy="350" r="42" fill="#ffffff"/>
           <text x="200" y="346" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">AI</text>
-          <text x="200" y="359" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">udvikling &amp; værdi</text>
+          <text x="200" y="359" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit" data-i18n="svg.aisub">udvikling &amp; værdi</text>
 
           <circle cx="50" cy="200" r="42" fill="#ffffff"/>
-          <text x="50" y="196" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit">IT-strategi</text>
-          <text x="50" y="209" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit">&amp; ledelse</text>
+          <text x="50" y="196" text-anchor="middle" fill="#132436" font-size="12.5" font-weight="700" font-family="inherit" data-i18n="svg.strat">IT-strategi</text>
+          <text x="50" y="209" text-anchor="middle" fill="#4b5a68" font-size="9" font-family="inherit" data-i18n="svg.stratsub">&amp; ledelse</text>
         </svg>
       </div>
       <div class="tri-list">
         <div class="tri-item spec">
-          <strong>Identitet &amp; adgangsstyring <em>speciale</em></strong>
-          <span>Access governance, privilegerede adgange, katalogtjenester og automatiseret livscyklus — bygget så adgangene kan dokumenteres over for revisor.</span>
+          <strong data-i18n="tri.1t">Identitet &amp; adgangsstyring <em>speciale</em></strong>
+          <span data-i18n="tri.1d">Access governance, privilegerede adgange, katalogtjenester og automatiseret livscyklus — bygget så adgangene kan dokumenteres over for revisor.</span>
         </div>
         <div class="tri-item spec">
-          <strong>Sikkerhed &amp; compliance <em>speciale</em></strong>
-          <span>Et årti i sikkerhedsbranchen før IAM. NIS2, GDPR, ISO 27xxx og ISAE — både de tekniske kontroller og de politikker der skal understøttes.</span>
+          <strong data-i18n="tri.2t">Sikkerhed &amp; compliance <em>speciale</em></strong>
+          <span data-i18n="tri.2d">Et årti i sikkerhedsbranchen før IAM. NIS2, GDPR, ISO 27xxx og ISAE — både de tekniske kontroller og de politikker der skal understøttes.</span>
         </div>
         <div class="tri-item">
-          <strong>AI — udvikling &amp; værdi</strong>
-          <span>Daglig, praktisk brug af AI i udviklingsarbejdet, og en nøgtern vurdering af hvor AI reelt flytter noget i forretningen.</span>
+          <strong data-i18n="tri.3t">AI — udvikling &amp; værdi</strong>
+          <span data-i18n="tri.3d">Daglig, praktisk brug af AI i udviklingsarbejdet, og en nøgtern vurdering af hvor AI reelt flytter noget i forretningen.</span>
         </div>
         <div class="tri-item">
-          <strong>IT-strategi &amp; ledelse</strong>
-          <span>Program- og projektstyring, behovs- og leverandørvurdering, migrering — og otte år med fuldt ansvar for P&amp;L, HR og jura.</span>
+          <strong data-i18n="tri.4t">IT-strategi &amp; ledelse</strong>
+          <span data-i18n="tri.4d">Program- og projektstyring, behovs- og leverandørvurdering, migrering — og otte år med fuldt ansvar for P&amp;L, HR og jura.</span>
         </div>
       </div>
     </div>
@@ -489,25 +505,25 @@
 
 <section id="kompetencer">
   <div class="wrap">
-    <span class="eyebrow">Hvad jeg kan bidrage med</span>
-    <h2>Fire fagområder — to af dem som speciale</h2>
+    <span class="eyebrow" data-i18n="comp.eyebrow">Hvad jeg kan bidrage med</span>
+    <h2 data-i18n="comp.h2">Fire fagområder — to af dem som speciale</h2>
 
     <article class="area" id="identitet">
       <div class="area-head">
         <span class="area-num">01</span>
         <div>
-          <span class="tag spec-tag">Speciale</span>
-          <h3>Identitet &amp; adgangsstyring</h3>
+          <span class="tag spec-tag" data-i18n="a1.tag">Speciale</span>
+          <h3 data-i18n="a1.h3">Identitet &amp; adgangsstyring</h3>
         </div>
       </div>
-      <p class="area-lede">Otte år med at eje en identitetsplatform hele vejen — fra vision og roadmap til drift hos kunder i det private og det offentlige. Jeg har truffet beslutningerne om hvilke funktioner der blev bygget, og prioriteret udvikling, drift, support og compliance mod risiko, kundeværdi og den kapacitet der var tilgængelig.</p>
+      <p class="area-lede" data-i18n="a1.lede">Otte år med at eje en identitetsplatform hele vejen — fra vision og roadmap til drift hos kunder i det private og det offentlige. Jeg har truffet beslutningerne om hvilke funktioner der blev bygget, og prioriteret udvikling, drift, support og compliance mod risiko, kundeværdi og den kapacitet der var tilgængelig.</p>
       <ul class="area-list">
-        <li><strong>Access governance &amp; attestering</strong> — attesteringskampagner med eskalering op ad ledelseskæden, rollebaseret adgangsmodel og selvbetjent bestilling med godkendelsesflow.</li>
-        <li><strong>Privilegerede adgange</strong> — governance for privilegerede roller: kun direkte tildeling, dedikeret attesteringskadence og just-in-time aktivering frem for permanente rettigheder.</li>
-        <li><strong>Katalogtjenester &amp; autentifikation</strong> — Microsoft Entra ID til kontolivscyklus, gruppe- og licenstildeling, sessionspolitik og step-up MFA ved følsomme handlinger.</li>
-        <li><strong>Joiner-mover-leaver</strong> — automatiseret livscyklus: konti klar før første arbejdsdag, roller på tværs af systemer, og offboarding der lukker sessioner, frigiver licenser og håndhæver karantæne og opbevaring.</li>
-        <li><strong>Datagrundlaget</strong> — integration til de største HR- og lønplatforme, så data bag hver digital identitet er korrekt ved kilden.</li>
-        <li><strong>Afstemning &amp; bevis</strong> — rapportering der giver revisor holdbar dokumentation for hvem der har adgang til hvad, og hvorfor.</li>
+        <li data-i18n="a1.li1"><strong>Access governance &amp; attestering</strong> — attesteringskampagner med eskalering op ad ledelseskæden, rollebaseret adgangsmodel og selvbetjent bestilling med godkendelsesflow.</li>
+        <li data-i18n="a1.li2"><strong>Privilegerede adgange</strong> — governance for privilegerede roller: kun direkte tildeling, dedikeret attesteringskadence og just-in-time aktivering frem for permanente rettigheder.</li>
+        <li data-i18n="a1.li3"><strong>Katalogtjenester &amp; autentifikation</strong> — Microsoft Entra ID til kontolivscyklus, gruppe- og licenstildeling, sessionspolitik og step-up MFA ved følsomme handlinger.</li>
+        <li data-i18n="a1.li4"><strong>Joiner-mover-leaver</strong> — automatiseret livscyklus: konti klar før første arbejdsdag, roller på tværs af systemer, og offboarding der lukker sessioner, frigiver licenser og håndhæver karantæne og opbevaring.</li>
+        <li data-i18n="a1.li5"><strong>Datagrundlaget</strong> — integration til de største HR- og lønplatforme, så data bag hver digital identitet er korrekt ved kilden.</li>
+        <li data-i18n="a1.li6"><strong>Afstemning &amp; bevis</strong> — rapportering der giver revisor holdbar dokumentation for hvem der har adgang til hvad, og hvorfor.</li>
       </ul>
     </article>
 
@@ -515,18 +531,18 @@
       <div class="area-head">
         <span class="area-num">02</span>
         <div>
-          <span class="tag spec-tag">Speciale</span>
-          <h3>Sikkerhed &amp; compliance</h3>
+          <span class="tag spec-tag" data-i18n="a2.tag">Speciale</span>
+          <h3 data-i18n="a2.h3">Sikkerhed &amp; compliance</h3>
         </div>
       </div>
-      <p class="area-lede">Før jeg byggede en IAM-virksomhed, havde jeg et årti i sikkerhedsbranchen — hos Symantec og NetIQ/Micro Focus. Det er derfor jeg ser identitetsstyring som en sikkerhedsdisciplin først, og ikke som en administrativ opgave. Automatisering er i sig selv en sikkerhedskontrol: en pålidelig offboarding lukker som eksempel adgangen præcis når det er påkrævet.</p>
+      <p class="area-lede" data-i18n="a2.lede">Før jeg byggede en IAM-virksomhed, havde jeg et årti i sikkerhedsbranchen — hos Symantec og NetIQ/Micro Focus. Det er derfor jeg ser identitetsstyring som en sikkerhedsdisciplin først, og ikke som en administrativ opgave. Automatisering er i sig selv en sikkerhedskontrol: en pålidelig offboarding lukker som eksempel adgangen præcis når det er påkrævet.</p>
       <ul class="area-list">
-        <li><strong>Regulativer i praksis</strong> — NIS2, GDPR, ISO 27xxx og ISAE omsat til noget der kan bygges, drives og dokumenteres.</li>
-        <li><strong>Revisionsparathed</strong> — uforanderlig audit-log, compliance-rapportering og dokumentation der holder når revisor spørger.</li>
-        <li><strong>Vurdering af løsninger og leverandører</strong> — nøgtern bedømmelse af hvad der reelt dækker behovet, og hvad der bare ser godt ud i en demo.</li>
-        <li><strong>Programstyring af compliance-projekter</strong> — med prioritering efter risiko frem for efter hvad der er nemmest at komme i gang med.</li>
-        <li><strong>Bred sikkerhedsbaggrund</strong> — endpoint- og perimeterbeskyttelse, sårbarheds- og politikstyring, datatabsforebyggelse og kryptering.</li>
-        <li><strong>Kritisk infrastruktur</strong> — drift af en AWS-platform med 50.000+ brugere på tværs af offentlige og private organisationer.</li>
+        <li data-i18n="a2.li1"><strong>Regulativer i praksis</strong> — NIS2, GDPR, ISO 27xxx og ISAE omsat til noget der kan bygges, drives og dokumenteres.</li>
+        <li data-i18n="a2.li2"><strong>Revisionsparathed</strong> — uforanderlig audit-log, compliance-rapportering og dokumentation der holder når revisor spørger.</li>
+        <li data-i18n="a2.li3"><strong>Vurdering af løsninger og leverandører</strong> — nøgtern bedømmelse af hvad der reelt dækker behovet, og hvad der bare ser godt ud i en demo.</li>
+        <li data-i18n="a2.li4"><strong>Programstyring af compliance-projekter</strong> — med prioritering efter risiko frem for efter hvad der er nemmest at komme i gang med.</li>
+        <li data-i18n="a2.li5"><strong>Bred sikkerhedsbaggrund</strong> — endpoint- og perimeterbeskyttelse, sårbarheds- og politikstyring, datatabsforebyggelse og kryptering.</li>
+        <li data-i18n="a2.li6"><strong>Kritisk infrastruktur</strong> — drift af en AWS-platform med 50.000+ brugere på tværs af offentlige og private organisationer.</li>
       </ul>
     </article>
 
@@ -534,17 +550,17 @@
       <div class="area-head">
         <span class="area-num">03</span>
         <div>
-          <h3>AI — udvikling og forretning</h3>
+          <h3 data-i18n="a3.h3">AI — udvikling og forretning</h3>
         </div>
       </div>
-      <p class="area-lede">Det seneste år har jeg arbejdet med konkret udviklingsarbejde drevet af AI med Claude Code. Det har givet en praktisk forståelse af hvor AI reelt skaber værdi — og hvor det ikke gør. Den forskel er svær at have en holdning til, hvis man ikke selv har bygget noget med det.</p>
+      <p class="area-lede" data-i18n="a3.lede">Det seneste år har jeg arbejdet med konkret udviklingsarbejde drevet af AI med Claude Code. Det har givet en praktisk forståelse af hvor AI reelt skaber værdi — og hvor det ikke gør. Den forskel er svær at have en holdning til, hvis man ikke selv har bygget noget med det.</p>
       <ul class="area-list">
-        <li><strong>AI i udviklingsarbejdet</strong> — dagligt, hands-on arbejde med Claude Code frem for teoretisk kendskab.</li>
-        <li><strong>Vurdering af værdi</strong> — hvor AI flytter noget i forretningen, og hvor det bliver teknologi for teknologiens skyld.</li>
-        <li><strong>On-premises kontra cloud</strong> — hvornår lokal AI-infrastruktur giver mening frem for rene skyabonnementer.</li>
-        <li><strong>Automatisering som kontrol</strong> — AI og automatisering brugt til at hæve sikkerhedsniveauet, ikke kun til at spare tid.</li>
-        <li><strong>Bindeled mellem udvikling og forretning</strong> — oversættelse begge veje, så begge sider forstår hvad der er muligt og hvad det koster.</li>
-        <li><strong>Fra idé til produktion</strong> — AI-understøttet udvikling hele vejen: fra første idé til testet og dokumenteret kode klar til produktion.</li>
+        <li data-i18n="a3.li1"><strong>AI i udviklingsarbejdet</strong> — dagligt, hands-on arbejde med Claude Code frem for teoretisk kendskab.</li>
+        <li data-i18n="a3.li2"><strong>Vurdering af værdi</strong> — hvor AI flytter noget i forretningen, og hvor det bliver teknologi for teknologiens skyld.</li>
+        <li data-i18n="a3.li3"><strong>On-premises kontra cloud</strong> — hvornår lokal AI-infrastruktur giver mening frem for rene skyabonnementer.</li>
+        <li data-i18n="a3.li4"><strong>Automatisering som kontrol</strong> — AI og automatisering brugt til at hæve sikkerhedsniveauet, ikke kun til at spare tid.</li>
+        <li data-i18n="a3.li5"><strong>Bindeled mellem udvikling og forretning</strong> — oversættelse begge veje, så begge sider forstår hvad der er muligt og hvad det koster.</li>
+        <li data-i18n="a3.li6"><strong>Fra idé til produktion</strong> — AI-understøttet udvikling hele vejen: fra første idé til testet og dokumenteret kode klar til produktion.</li>
       </ul>
     </article>
 
@@ -552,17 +568,17 @@
       <div class="area-head">
         <span class="area-num">04</span>
         <div>
-          <h3>IT-strategi &amp; ledelse</h3>
+          <h3 data-i18n="a4.h3">IT-strategi &amp; ledelse</h3>
         </div>
       </div>
-      <p class="area-lede">32 år i enterprise-IT, heraf otte som stifter og direktør med fuldt ansvar for P&amp;L, HR, jura og drift. Jeg er vant til at forklare afvejninger for ledelsen i almindeligt forretningssprog — og at stå på mål for resultatet bagefter.</p>
+      <p class="area-lede" data-i18n="a4.lede">32 år i enterprise-IT, heraf otte som stifter og direktør med fuldt ansvar for P&amp;L, HR, jura og drift. Jeg er vant til at forklare afvejninger for ledelsen i almindeligt forretningssprog — og at stå på mål for resultatet bagefter.</p>
       <ul class="area-list">
-        <li><strong>Strategi og arkitektur</strong> — retning for IT forankret i det, forretningen reelt har brug for.</li>
-        <li><strong>Program- og projektstyring</strong> — med milepæle der kan følges, og en prioritering der kan forsvares.</li>
-        <li><strong>Behovsafklaring og leverandørvalg</strong> — fra kravafdækning til forhandling.</li>
-        <li><strong>Migrering</strong> — styring af overgangen fra ét system til et andet, uden at miste kontrollen undervejs.</li>
-        <li><strong>Rådgivning på direktionsniveau</strong> — sparring med CIO'er, CISO'er og DPO'er om strategi, risiko og investeringer.</li>
-        <li><strong>Fuldt ejerskab</strong> — otte år med ansvar for økonomi, personale, jura og kunderelationer i egen virksomhed.</li>
+        <li data-i18n="a4.li1"><strong>Strategi og arkitektur</strong> — retning for IT forankret i det, forretningen reelt har brug for.</li>
+        <li data-i18n="a4.li2"><strong>Program- og projektstyring</strong> — med milepæle der kan følges, og en prioritering der kan forsvares.</li>
+        <li data-i18n="a4.li3"><strong>Behovsafklaring og leverandørvalg</strong> — fra kravafdækning til forhandling.</li>
+        <li data-i18n="a4.li4"><strong>Migrering</strong> — styring af overgangen fra ét system til et andet, uden at miste kontrollen undervejs.</li>
+        <li data-i18n="a4.li5"><strong>Rådgivning på direktionsniveau</strong> — sparring med CIO'er, CISO'er og DPO'er om strategi, risiko og investeringer.</li>
+        <li data-i18n="a4.li6"><strong>Fuldt ejerskab</strong> — otte år med ansvar for økonomi, personale, jura og kunderelationer i egen virksomhed.</li>
       </ul>
     </article>
   </div>
@@ -570,52 +586,52 @@
 
 <section class="exp-section" id="erfaring">
   <div class="wrap">
-    <span class="eyebrow">Erfaring</span>
-    <h2>Fra sikkerhedsbranchen til eget IAM-produkt</h2>
+    <span class="eyebrow" data-i18n="exp.eyebrow">Erfaring</span>
+    <h2 data-i18n="exp.h2">Fra sikkerhedsbranchen til eget IAM-produkt</h2>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-period">2018 – 2026</div>
-        <div class="tl-role">Founder &amp; CEO — i praksis også produktejer</div>
+        <div class="tl-role" data-i18n="tl1.role">Founder &amp; CEO — i praksis også produktejer</div>
         <div class="tl-org">ID Connect A/S</div>
-        <p class="tl-desc">Byggede virksomheden op omkring en identitetsplatform, der gør kunder i stand til at leve op til og dokumentere adgangskravene i NIS2, GDPR og ISO 27xxx. Jeg satte vision og roadmap, besluttede hvad der blev bygget, og prioriterede udvikling, drift, support og compliance. Platformen kørte på AWS og betjente over 50.000 brugere på tværs af offentlige og private organisationer, herunder den grønlandske energisektor.</p>
+        <p class="tl-desc" data-i18n="tl1.desc">Byggede virksomheden op omkring en identitetsplatform, der gør kunder i stand til at leve op til og dokumentere adgangskravene i NIS2, GDPR og ISO 27xxx. Jeg satte vision og roadmap, besluttede hvad der blev bygget, og prioriterede udvikling, drift, support og compliance. Platformen kørte på AWS og betjente over 50.000 brugere på tværs af offentlige og private organisationer, herunder den grønlandske energisektor.</p>
       </div>
       <div class="tl-item">
         <div class="tl-period">2014 – 2018</div>
         <div class="tl-role">Territory Manager, NetIQ Denmark</div>
         <div class="tl-org">Micro Focus</div>
-        <p class="tl-desc">Ansvar for NetIQ — sikkerhedsdivisionen i Micro Focus — i Danmark: identity &amp; access management, access governance, styring af privilegerede konti samt security &amp; risk management. Rådgav CISO'er, CIO'er og infrastrukturchefer i både private og offentlige organisationer om identitetsprogrammer, og oversatte regulativer og risiko til konkrete roadmaps og business cases.</p>
+        <p class="tl-desc" data-i18n="tl2.desc">Ansvar for NetIQ — sikkerhedsdivisionen i Micro Focus — i Danmark: identity &amp; access management, access governance, styring af privilegerede konti samt security &amp; risk management. Rådgav CISO'er, CIO'er og infrastrukturchefer i både private og offentlige organisationer om identitetsprogrammer, og oversatte regulativer og risiko til konkrete roadmaps og business cases.</p>
       </div>
       <div class="tl-item">
         <div class="tl-period">2008 – 2014</div>
         <div class="tl-role">Enterprise Account Manager</div>
         <div class="tl-org">Symantec</div>
-        <p class="tl-desc">Seks år med nogle af verdens førende sikkerhedsteknologier, solgt og rådgivet på C-niveau i Danmarks mest regulerede brancher. Arbejdet dækkede tre discipliner:</p>
+        <p class="tl-desc" data-i18n="tl3.desc">Seks år med nogle af verdens førende sikkerhedsteknologier, solgt og rådgivet på C-niveau i Danmarks mest regulerede brancher. Arbejdet dækkede tre discipliner:</p>
         <ul class="tl-sublist">
-          <li><strong>Databeskyttelse</strong> — enterprise backup med NetBackup, arkivering med Enterprise Vault samt høj tilgængelighed og storage management med Veritas Storage Foundation og Cluster.</li>
-          <li><strong>Enhedsbeskyttelse</strong> — endpoint- og perimeterbeskyttelse af arbejdspladser og servere i store, komplekse miljøer.</li>
-          <li><strong>Informationsbeskyttelse</strong> — datatabsforebyggelse (DLP) og kryptering, suppleret med politik- og sårbarhedsstyring til compliance-formål.</li>
+          <li data-i18n="sub.1"><strong>Databeskyttelse</strong> — enterprise backup med NetBackup, arkivering med Enterprise Vault samt høj tilgængelighed og storage management med Veritas Storage Foundation og Cluster.</li>
+          <li data-i18n="sub.2"><strong>Enhedsbeskyttelse</strong> — endpoint- og perimeterbeskyttelse af arbejdspladser og servere i store, komplekse miljøer.</li>
+          <li data-i18n="sub.3"><strong>Informationsbeskyttelse</strong> — datatabsforebyggelse (DLP) og kryptering, suppleret med politik- og sårbarhedsstyring til compliance-formål.</li>
         </ul>
       </div>
     </div>
 
     <div class="earlier">
-      <h3 class="earlier-h">Tidligere karriere</h3>
+      <h3 class="earlier-h" data-i18n="earlier.h">Tidligere karriere</h3>
       <ul class="earlier-list">
         <li>
           <span class="ey-period">2007 – 2008</span>
-          <span class="ey-body"><strong>VP, Managing Director</strong>, Mondo Hosting A/S — P&amp;L-ansvar for hostingforretning med ca. 50 mio. kr. i omsætning og konsolidering af flere opkøbte selskaber.</span>
+          <span class="ey-body" data-i18n="ey.1"><strong>VP, Managing Director</strong>, Mondo Hosting A/S — P&amp;L-ansvar for hostingforretning med ca. 50 mio. kr. i omsætning og konsolidering af flere opkøbte selskaber.</span>
         </li>
         <li>
           <span class="ey-period">2004 – 2007</span>
-          <span class="ey-body"><strong>Sales Manager</strong>, Mondo A/S — direkte og indirekte salg af hostingydelser, kanalopbygning og forretningsudvikling.</span>
+          <span class="ey-body" data-i18n="ey.2"><strong>Sales Manager</strong>, Mondo A/S — direkte og indirekte salg af hostingydelser, kanalopbygning og forretningsudvikling.</span>
         </li>
         <li>
           <span class="ey-period">2000 – 2004</span>
-          <span class="ey-body"><strong>Channel Manager</strong>, StorageTek — startede i direkte salg af storage- og backupløsninger og byggede derefter den danske partnerkanal op fra bunden.</span>
+          <span class="ey-body" data-i18n="ey.3"><strong>Channel Manager</strong>, StorageTek — startede i direkte salg af storage- og backupløsninger og byggede derefter den danske partnerkanal op fra bunden.</span>
         </li>
         <li>
           <span class="ey-period">1994 – 2000</span>
-          <span class="ey-body"><strong>Sales Manager</strong>, EDB Gruppen / Dolberg Data — ERP- og infrastrukturprojekter, fra sælger til salgschef med ansvar for et team på seks.</span>
+          <span class="ey-body" data-i18n="ey.4"><strong>Sales Manager</strong>, EDB Gruppen / Dolberg Data — ERP- og infrastrukturprojekter, fra sælger til salgschef med ansvar for et team på seks.</span>
         </li>
       </ul>
     </div>
@@ -625,29 +641,29 @@
 <section class="contact-section" id="kontakt">
   <div class="wrap">
     <div>
-      <h2>Åben for nye muligheder</h2>
-      <p>Jeg er åben for både kortere interim- og kontraktopgaver og faste stillinger — hos private virksomheder og offentlige arbejdsgivere i Danmark, med fysisk fremmøde eller hybrid. Tag endelig fat, hvis du vil tale om en konkret mulighed.</p>
+      <h2 data-i18n="ct.h2">Åben for nye muligheder</h2>
+      <p data-i18n="ct.p">Jeg er åben for både kortere interim- og kontraktopgaver og faste stillinger — hos private virksomheder og offentlige arbejdsgivere i Danmark, med fysisk fremmøde eller hybrid. Tag endelig fat, hvis du vil tale om en konkret mulighed.</p>
       <div class="contact-actions">
-        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener">LinkedIn-profil</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ostergaardjorgen/" target="_blank" rel="noopener" data-i18n="ct.li">LinkedIn-profil</a>
       </div>
     </div>
     <div>
-      <div class="form-sent-note" id="sentNote" style="display:none;">Tak for din besked — jeg vender tilbage hurtigst muligt.</div>
+      <div class="form-sent-note" id="sentNote" style="display:none;" data-i18n="ct.sent">Tak for din besked — jeg vender tilbage hurtigst muligt.</div>
       <form class="contact-form" action="https://formsubmit.co/ostergaard.jorgen@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Ny henvendelse fra hjemmesiden">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_next" value="https://ostergaardjorgen.github.io/?sent=1#kontakt">
         <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
-        <label for="cf-name">Navn</label>
+        <label for="cf-name" data-i18n="ct.lname">Navn</label>
         <input id="cf-name" type="text" name="Navn" required>
-        <label for="cf-email">Din e-mail</label>
+        <label for="cf-email" data-i18n="ct.lmail">Din e-mail</label>
         <input id="cf-email" type="email" name="_replyto" required>
-        <label for="cf-phone">Telefon (valgfrit)</label>
+        <label for="cf-phone" data-i18n="ct.lphone">Telefon (valgfrit)</label>
         <input id="cf-phone" type="tel" name="Telefon" placeholder="+45 ...">
-        <label for="cf-message">Besked</label>
+        <label for="cf-message" data-i18n="ct.lmsg">Besked</label>
         <textarea id="cf-message" name="Besked" rows="5" required></textarea>
-        <button type="submit" class="btn primary">Send besked</button>
+        <button type="submit" class="btn primary" data-i18n="ct.send">Send besked</button>
       </form>
     </div>
   </div>
@@ -656,30 +672,30 @@
 <nav class="tabbar" aria-label="Genveje">
   <a href="#profil" data-tab="profil">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg>
-    <span>Profil</span>
+    <span data-i18n="tab.profil">Profil</span>
   </a>
   <a href="#identitet" data-tab="identitet">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="12" r="3.6"/><path d="M12.1 12H21m-3 0v3m-3-3v2.2"/></svg>
-    <span>Identitet</span>
+    <span data-i18n="tab.identitet">Identitet</span>
   </a>
   <a href="#sikkerhed" data-tab="sikkerhed">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l6.5 2.6v5c0 4.2-2.8 7.5-6.5 8.9-3.7-1.4-6.5-4.7-6.5-8.9v-5z"/><path d="M9.2 12.1l2 2 3.6-3.9"/></svg>
-    <span>Sikkerhed</span>
+    <span data-i18n="tab.sikkerhed">Sikkerhed</span>
   </a>
   <a href="#erfaring" data-tab="erfaring">
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="12" rx="2"/><path d="M9 7.5V6a2 2 0 012-2h2a2 2 0 012 2v1.5"/></svg>
-    <span>Erfaring</span>
+    <span data-i18n="tab.erfaring">Erfaring</span>
   </a>
   <a href="#kontakt" data-tab="kontakt">
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 5.5L20 7"/></svg>
-    <span>Kontakt</span>
+    <span data-i18n="tab.kontakt">Kontakt</span>
   </a>
 </nav>
 
 <footer class="site">
   <div class="wrap">
-    <span class="foot-version">Version 0.10</span>
-    <span class="foot-note">Udarbejdet og præsenteret med assistance fra Claude og GitHub</span>
+    <span class="foot-version">Version 0.11</span>
+    <span class="foot-note" data-i18n="foot.note">Udarbejdet og præsenteret med assistance fra Claude og GitHub</span>
     <span class="foot-copy">© 2026 Jørgen Østergaard</span>
   </div>
 </footer>
@@ -711,6 +727,151 @@
     }, { threshold: [0, 0.15, 0.4, 0.75, 1], rootMargin: '-72px 0px -45% 0px' });
 
     targets.forEach(function (el) { io.observe(el); });
+  })();
+
+  // ---- Language toggle (Danish lives in the markup; English lives here) ----
+  (function () {
+    var EN = {
+      "nav.profil":"Profile","nav.identitet":"Identity","nav.sikkerhed":"Security","nav.ai":"AI",
+      "nav.strategi":"IT strategy","nav.erfaring":"Experience","nav.kontakt":"Contact",
+
+      "hero.badge":"Open to new opportunities \u2014 interim/contract or permanent",
+      "hero.h1":"Specialist in identity &amp; access management, security and IT leadership",
+      "hero.tagline":"12+ years dedicated to IAM and cyber security \u2014 eight of them owning an identity platform end to end, from vision and roadmap to running it for customers in both the private and the public sector. Alongside that: IT strategy and practical, daily experience with AI in development work.",
+      "hero.cta1":"Get in touch","hero.cta2":"View LinkedIn profile",
+      "fact.1n":"12+ yrs","fact.1l":"identity &amp; security",
+      "fact.2n":"8 yrs","fact.2l":"owning an IAM product",
+      "fact.3n":"32+ yrs","fact.3l":"enterprise IT",
+      "hero.meta":"Copenhagen \u00b7 On-site or hybrid \u00b7 Denmark",
+
+      "model.eyebrow":"My approach",
+      "model.h2":"Two specialisms, four fields \u2014 with the business at the centre",
+      "model.lede":"Identity and security are my specialisms. IT strategy and AI are what make them useful in practice. All four fields work towards one goal: value for the business, with concrete milestones that can be tracked and documented.",
+
+      "svg.biz":"Business","svg.bizsub":"value &amp; milestones",
+      "svg.spec1":"SPECIALISM","svg.id":"Identity","svg.idsub":"IAM &amp; governance",
+      "svg.spec2":"SPECIALISM","svg.sec":"Security","svg.secsub":"&amp; compliance",
+      "svg.aisub":"development &amp; value","svg.strat":"IT strategy","svg.stratsub":"&amp; leadership",
+
+      "tri.1t":"Identity &amp; access management <em>specialism</em>",
+      "tri.1d":"Access governance, privileged access, directory services and automated lifecycle \u2014 built so access can be evidenced to auditors.",
+      "tri.2t":"Security &amp; compliance <em>specialism</em>",
+      "tri.2d":"A decade in the security industry before IAM. NIS2, GDPR, ISO 27xxx and ISAE \u2014 both the technical controls and the policies that must be supported.",
+      "tri.3t":"AI \u2014 development &amp; value",
+      "tri.3d":"Daily, practical use of AI in development work, and a sober assessment of where AI genuinely moves the needle for the business.",
+      "tri.4t":"IT strategy &amp; leadership",
+      "tri.4d":"Programme and project management, needs and vendor assessment, migration \u2014 and eight years with full responsibility for P&amp;L, HR and legal.",
+
+      "comp.eyebrow":"What I can contribute",
+      "comp.h2":"Four fields \u2014 two of them as specialisms",
+
+      "a1.tag":"Specialism","a1.h3":"Identity &amp; access management",
+      "a1.lede":"Eight years owning an identity platform end to end \u2014 from vision and roadmap to running it for customers in the private and public sector. I made the decisions about which capabilities were built, and prioritised development, operations, support and compliance against risk, customer value and the capacity that was available.",
+      "a1.li1":"<strong>Access governance &amp; certification</strong> \u2014 certification campaigns with escalation up the management chain, a role-based access model and self-service requests with approval workflows.",
+      "a1.li2":"<strong>Privileged access</strong> \u2014 governance for privileged roles: direct assignment only, a dedicated certification cadence and just-in-time activation instead of standing privilege.",
+      "a1.li3":"<strong>Directory services &amp; authentication</strong> \u2014 Microsoft Entra ID for account lifecycle, group and licence assignment, session policy and step-up MFA on sensitive operations.",
+      "a1.li4":"<strong>Joiner-mover-leaver</strong> \u2014 automated lifecycle: accounts ready before the first working day, roles across systems, and offboarding that closes sessions, releases licences and enforces quarantine and retention.",
+      "a1.li5":"<strong>The data foundation</strong> \u2014 integration with the major HR and payroll platforms, so the data behind each digital identity is correct at source.",
+      "a1.li6":"<strong>Reconciliation &amp; evidence</strong> \u2014 reporting that gives auditors durable documentation of who has access to what, and why.",
+
+      "a2.tag":"Specialism","a2.h3":"Security &amp; compliance",
+      "a2.lede":"Before I built an IAM company I spent a decade in the security industry \u2014 at Symantec and NetIQ/Micro Focus. That is why I see identity management as a security discipline first, and not as an administrative task. Automation is itself a security control: reliable offboarding, for example, closes access exactly when it is required.",
+      "a2.li1":"<strong>Regulation in practice</strong> \u2014 NIS2, GDPR, ISO 27xxx and ISAE turned into something that can be built, operated and documented.",
+      "a2.li2":"<strong>Audit readiness</strong> \u2014 immutable audit logs, compliance reporting and documentation that holds up when the auditor asks.",
+      "a2.li3":"<strong>Assessing solutions and vendors</strong> \u2014 a sober judgement of what actually covers the need, and what merely looks good in a demo.",
+      "a2.li4":"<strong>Programme management of compliance projects</strong> \u2014 prioritised by risk rather than by whatever is easiest to start.",
+      "a2.li5":"<strong>Broad security background</strong> \u2014 endpoint and perimeter protection, vulnerability and policy management, data loss prevention and encryption.",
+      "a2.li6":"<strong>Critical infrastructure</strong> \u2014 running an AWS platform with 50,000+ users across public and private organisations.",
+
+      "a3.h3":"AI \u2014 development and business",
+      "a3.lede":"Over the past year I have done concrete development work driven by AI with Claude Code. That has given me a practical understanding of where AI genuinely creates value \u2014 and where it does not. That distinction is hard to have a view on unless you have built something with it yourself.",
+      "a3.li1":"<strong>AI in development work</strong> \u2014 daily, hands-on work with Claude Code rather than theoretical familiarity.",
+      "a3.li2":"<strong>Assessing value</strong> \u2014 where AI moves the needle for the business, and where it becomes technology for its own sake.",
+      "a3.li3":"<strong>On-premises versus cloud</strong> \u2014 when local AI infrastructure makes sense rather than pure cloud subscriptions.",
+      "a3.li4":"<strong>Automation as a control</strong> \u2014 AI and automation used to raise the security level, not only to save time.",
+      "a3.li5":"<strong>A bridge between development and business</strong> \u2014 translation both ways, so both sides understand what is possible and what it costs.",
+      "a3.li6":"<strong>From idea to production</strong> \u2014 AI-supported development all the way: from first idea to tested and documented code ready for production.",
+
+      "a4.h3":"IT strategy &amp; leadership",
+      "a4.lede":"32 years in enterprise IT, eight of them as founder and CEO with full responsibility for P&amp;L, HR, legal and operations. I am used to explaining trade-offs to senior leadership in plain business terms \u2014 and standing behind the outcome afterwards.",
+      "a4.li1":"<strong>Strategy and architecture</strong> \u2014 direction for IT anchored in what the business actually needs.",
+      "a4.li2":"<strong>Programme and project management</strong> \u2014 with milestones that can be tracked and a prioritisation that can be defended.",
+      "a4.li3":"<strong>Needs clarification and vendor selection</strong> \u2014 from requirements to negotiation.",
+      "a4.li4":"<strong>Migration</strong> \u2014 managing the move from one system to another without losing control along the way.",
+      "a4.li5":"<strong>Advice at executive level</strong> \u2014 sparring with CIOs, CISOs and DPOs on strategy, risk and investment.",
+      "a4.li6":"<strong>Full ownership</strong> \u2014 eight years responsible for finances, people, legal and customer relationships in my own company.",
+
+      "exp.eyebrow":"Experience",
+      "exp.h2":"From the security industry to my own IAM product",
+      "tl1.role":"Founder &amp; CEO \u2014 in practice also product owner",
+      "tl1.desc":"Built the company around an identity platform that enables customers to meet and document the access requirements in NIS2, GDPR and ISO 27xxx. I set the vision and roadmap, decided what was built, and prioritised development, operations, support and compliance. The platform ran on AWS and served more than 50,000 users across public and private organisations, including the Greenlandic energy sector.",
+      "tl2.desc":"Responsible for NetIQ \u2014 the security division of Micro Focus \u2014 in Denmark: identity &amp; access management, access governance, privileged account management and security &amp; risk management. Advised CISOs, CIOs and heads of infrastructure in both private and public organisations on identity programmes, and translated regulation and risk into concrete roadmaps and business cases.",
+      "tl3.desc":"Six years with some of the world\u2019s leading security technologies, sold and advised at C-level in Denmark\u2019s most regulated industries. The work covered three disciplines:",
+      "sub.1":"<strong>Data protection</strong> \u2014 enterprise backup with NetBackup, archiving with Enterprise Vault, plus high availability and storage management with Veritas Storage Foundation and Cluster.",
+      "sub.2":"<strong>Device protection</strong> \u2014 endpoint and perimeter protection of workstations and servers in large, complex environments.",
+      "sub.3":"<strong>Information protection</strong> \u2014 data loss prevention (DLP) and encryption, supplemented by policy and vulnerability management for compliance purposes.",
+
+      "earlier.h":"Earlier career",
+      "ey.1":"<strong>VP, Managing Director</strong>, Mondo Hosting A/S \u2014 P&amp;L responsibility for a hosting business with approx. DKK 50m in revenue and consolidation of several acquired companies.",
+      "ey.2":"<strong>Sales Manager</strong>, Mondo A/S \u2014 direct and indirect sales of hosting services, channel building and business development.",
+      "ey.3":"<strong>Channel Manager</strong>, StorageTek \u2014 started in direct sales of storage and backup solutions, then built the Danish partner channel from scratch.",
+      "ey.4":"<strong>Sales Manager</strong>, EDB Gruppen / Dolberg Data \u2014 ERP and infrastructure projects, from sales rep to sales manager with responsibility for a team of six.",
+
+      "ct.h2":"Open to new opportunities",
+      "ct.p":"I am open to both shorter interim and contract assignments and permanent positions \u2014 with private companies and public sector employers in Denmark, on-site or hybrid. Do get in touch if you would like to talk about a specific opportunity.",
+      "ct.li":"LinkedIn profile",
+      "ct.sent":"Thank you for your message \u2014 I will get back to you as soon as possible.",
+      "ct.lname":"Name","ct.lmail":"Your email","ct.lphone":"Phone (optional)","ct.lmsg":"Message","ct.send":"Send message",
+
+      "tab.profil":"Profile","tab.identitet":"Identity","tab.sikkerhed":"Security",
+      "tab.erfaring":"Experience","tab.kontakt":"Contact",
+
+      "foot.note":"Created and presented with assistance from Claude and GitHub"
+    };
+
+    var FLAG_GB = '<svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#fff" stroke-width="4"/><path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" stroke-width="2"/><path d="M15,0 V20 M0,10 H30" stroke="#fff" stroke-width="6"/><path d="M15,0 V20 M0,10 H30" stroke="#C8102E" stroke-width="3.5"/></svg>';
+    var FLAG_DK = '<svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#c8102e"/><rect x="10" width="4" height="20" fill="#fff"/><rect y="8" width="30" height="4" fill="#fff"/></svg>';
+
+    var descEl = document.querySelector('meta[name=description]');
+    var META = {
+      da: { title: document.title, desc: descEl ? descEl.content : '' },
+      en: { title: 'J\u00f8rgen \u00d8stergaard \u2014 specialist in IAM, security and IT leadership',
+            desc: 'J\u00f8rgen \u00d8stergaard \u2014 specialist in identity & access management (IAM), security/compliance and IT leadership, with practical AI experience. Open to interim/contract and permanent roles.' }
+    };
+
+    var btn = document.getElementById('langToggle');
+    var nodes = [].slice.call(document.querySelectorAll('[data-i18n]'));
+    var DA = {};
+    nodes.forEach(function (el) { DA[el.getAttribute('data-i18n')] = el.innerHTML; });
+
+    function apply(lang) {
+      nodes.forEach(function (el) {
+        var k = el.getAttribute('data-i18n');
+        var v = lang === 'en' ? EN[k] : DA[k];
+        if (v != null) el.innerHTML = v;
+      });
+      document.documentElement.lang = lang;
+      document.title = META[lang].title;
+      if (descEl) descEl.content = META[lang].desc;
+      var tb = document.querySelector('.tabbar');
+      if (tb) tb.setAttribute('aria-label', lang === 'en' ? 'Shortcuts' : 'Genveje');
+      if (btn) {
+        btn.innerHTML = (lang === 'en' ? FLAG_DK : FLAG_GB) +
+                        '<span>' + (lang === 'en' ? 'DA' : 'EN') + '</span>';
+        btn.setAttribute('aria-label', lang === 'en' ? 'Skift til dansk' : 'Switch to English');
+      }
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+
+    var start = 'da';
+    try { start = localStorage.getItem('lang') || 'da'; } catch (e) {}
+    apply(start === 'en' ? 'en' : 'da');
+
+    if (btn) {
+      btn.addEventListener('click', function () {
+        apply(document.documentElement.lang === 'en' ? 'da' : 'en');
+      });
+    }
   })();
 </script>
 </body>
