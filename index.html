@@ -306,6 +306,7 @@
     padding:12px 16px;border-radius:10px;font-size:.88rem;font-weight:600;margin-bottom:14px;
   }
   .hp-field{position:absolute;left:-9999px;top:-9999px;}
+  .form-note{font-size:.76rem;color:#9fb1bf;margin:10px 0 0 0;line-height:1.45;}
 
   /* App-style bottom tab bar — mobile only */
   .tabbar{display:none;}
@@ -333,6 +334,30 @@
     }
     .tabbar a.active{color:var(--accent);}
   }
+
+  /* Privacy notice */
+  .privacy{padding:0;border-top:1px solid var(--line);background:var(--paper-2);}
+  .privacy .wrap{padding-top:24px;padding-bottom:24px;}
+  .privacy summary{
+    cursor:pointer;font-size:.85rem;font-weight:700;color:var(--slate);
+    list-style:none;display:inline-flex;align-items:center;gap:9px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .privacy summary::-webkit-details-marker{display:none;}
+  .privacy summary::before{
+    content:"+";display:inline-flex;align-items:center;justify-content:center;
+    width:18px;height:18px;border-radius:50%;
+    background:var(--accent);color:var(--white);
+    font-size:.8rem;line-height:1;flex:none;
+  }
+  .privacy details[open] summary::before{content:"–";}
+  .privacy summary:hover{color:var(--navy);}
+  .privacy-body{
+    margin-top:16px;max-width:80ch;
+    font-size:.86rem;line-height:1.62;color:var(--slate);
+  }
+  .privacy-body p{margin:0 0 11px 0;}
+  .privacy-body strong{color:var(--navy);}
 
   /* Footer: version left, note centred, copyright right — same size and weight */
   footer.site{
@@ -676,8 +701,24 @@
         <label for="cf-message" data-i18n="ct.lmsg">Besked</label>
         <textarea id="cf-message" name="Besked" rows="5" required></textarea>
         <button type="submit" class="btn primary" data-i18n="ct.send">Send besked</button>
+        <p class="form-note" data-i18n="ct.note">Dine oplysninger bruges kun til at besvare din henvendelse. Se «Privatliv og cookies» nederst på siden.</p>
       </form>
     </div>
+  </div>
+</section>
+
+<section class="privacy" id="privatliv">
+  <div class="wrap">
+    <details>
+      <summary data-i18n="priv.summary">Privatliv og cookies</summary>
+      <div class="privacy-body">
+        <p data-i18n="priv.p1"><strong>Ingen cookies, ingen sporing.</strong> Siden bruger ingen cookies, ingen analyseværktøjer og ingen sporing. Der hentes intet fra tredjepart, når du læser siden.</p>
+        <p data-i18n="priv.p2"><strong>Sprogvalg.</strong> Skifter du sprog, gemmes valget lokalt i din browser (localStorage, nøglen «lang»). Det er ikke en cookie, indeholder ingen personoplysninger og sendes ikke nogen steder hen. Du kan fjerne det ved at rydde dine browserdata.</p>
+        <p data-i18n="priv.p3"><strong>Kontaktformularen.</strong> Sender du formularen, behandles navn, e-mail, eventuelt telefonnummer og din besked af tjenesten FormSubmit, som videresender beskeden til min e-mail. Oplysningerne bruges udelukkende til at besvare din henvendelse og deles ikke med andre. Vil du helt undgå en tredjepart, kan du i stedet skrive direkte til ostergaard.jorgen@gmail.com.</p>
+        <p data-i18n="priv.p4"><strong>Hosting.</strong> Siden ligger på GitHub Pages. GitHub registrerer besøgendes IP-adresser i sine serverlogs af sikkerhedsmæssige årsager. Jeg har ikke adgang til de logs.</p>
+        <p data-i18n="priv.p5"><strong>Dine rettigheder.</strong> Du kan til enhver tid bede om indsigt i, rettelse af eller sletning af det, du har sendt mig. Skriv til ostergaard.jorgen@gmail.com. Dataansvarlig er Jørgen Østergaard, København.</p>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -706,7 +747,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <span class="foot-version">Version 0.16</span>
+    <span class="foot-version">Version 0.17</span>
     <span class="foot-note" data-i18n="foot.note">Udarbejdet og præsenteret med assistance fra Claude og GitHub</span>
     <span class="foot-copy">© 2026 Jørgen Østergaard</span>
   </div>
@@ -838,6 +879,13 @@
       "tab.profil":"Home","tab.identitet":"Identity","tab.sikkerhed":"Security",
       "tab.erfaring":"Experience","tab.kontakt":"Contact",
 
+      "priv.summary":"Privacy and cookies",
+      "priv.p1":"<b>No cookies, no tracking.</b> This site uses no cookies, no analytics and no tracking. Nothing is loaded from third parties while you read it.",
+      "priv.p2":"<b>Language choice.</b> When you switch language, the choice is stored locally in your browser (localStorage, key \u00ablang\u00bb). It is not a cookie, contains no personal data and is never sent anywhere. You can remove it by clearing your browser data.",
+      "priv.p3":"<b>The contact form.</b> If you submit the form, your name, email, any phone number and your message are processed by the service FormSubmit, which forwards the message to my email. The information is used solely to answer you and is not shared with anyone else. If you would rather avoid a third party, write directly to ostergaard.jorgen@gmail.com.",
+      "priv.p4":"<b>Hosting.</b> The site is hosted on GitHub Pages. GitHub records visitors\u2019 IP addresses in its server logs for security purposes. I have no access to those logs.",
+      "priv.p5":"<b>Your rights.</b> You can at any time ask for access to, correction of or deletion of what you have sent me. Write to ostergaard.jorgen@gmail.com. The data controller is J\u00f8rgen \u00d8stergaard, Copenhagen.",
+      "ct.note":"Your details are used only to answer you. See \u00abPrivacy and cookies\u00bb at the bottom of the page.",
       "foot.note":"Created and presented with assistance from Claude and GitHub"
     };
 
