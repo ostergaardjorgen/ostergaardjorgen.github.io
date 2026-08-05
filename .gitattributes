@@ -1,0 +1,9 @@
+# Never apply line-ending conversion to binary assets — it corrupts them.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.svg text eol=lf
+*.html text eol=lf
+*.py text eol=lf
